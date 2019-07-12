@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анна Зуева](https://up.htmlacademy.ru/adaptive/17/user/642335).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Фарига] (https://htmlacademy.ru/profile/maximfariga).
 
 ---
 
