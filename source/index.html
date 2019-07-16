@@ -5,8 +5,144 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="MISHKA">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle main-nav__toggle--dropdown" type="button">Развернуть меню</button>
+        <div class="main-nav__wrapper main-nav__wrapper--dropdown">
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item">
+              <a  class="main-nav__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a  class="main-nav__link" href="order.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="main-nav__item">
+              <a  class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item">
+              <a  class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пусто</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main class="page-main">
+      <h1 class="visually-hidden">Интернет-магазин мимимишных штучек &laquo;Мишка&raquo;</h1>
+      <section class="assortment">
+        <h2 class="assortment__title">Милые штуки ручной работы для дома</h2>
+        <ul class="assortment__list">
+          <li class="assortment__item">
+            <a class="assortment__link" href="catalog.html">Предметы интерьера</a>
+          </li>
+          <li class="assortment__item">
+            <a class="assortment__link" href="catalog.html">Детские игрушки</a>
+          </li>
+        </ul>
+      </section>
+      <!-- assortment -->
+      <section class="trending">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <article class="trending__item product" >
+          <h3 class="product__name product__name--trendind">Вязаные корзинки</h3>
+          <p class="trending__title">Товар недели</p>
+          <p class="product__description product__description--trending">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="product__details product__details--trending">
+            <tr class="product__property">
+              <td class="product__property-name">Цвет:</td>
+              <td class="product__property-value">&laquo;Тиффани&raquo;/серый</td>
+            </tr>
+            <tr class="product__property">
+              <td class="product__property-name">Диаметр:</td>
+              <td class="product__property-value">25 см</td>
+            </tr>
+            <tr class="product__property">
+              <td class="product__property-name">Высота:</td>
+              <td class="product__property-value">15 см</td>
+            </tr>
+          </table>
+          <img class="product__img product__img--trending" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+          <p class="product__price-line product__price-line--trending">Цена:<span class="product__price product__price--trending">990 руб.</span></p>
+        </article>
+        <a class="order trending__order button" href="#">Заказать</a>
+      </section>
+      <!-- trending -->
+      <section class="advantages">
+        <h2 class="advantages__title">Коротко о нас:</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
+          <li class="advantages__item advantages__item--ikea">Скандинавский стиль по российской цене</li>
+          <li class="advantages__item advantages__item--likes">Увеличивает лайки на фотографиях</li>
+          <li class="advantages__item advantages__item--knit">Связано вручную с любовью и умилением</li>
+          <li class="advantages__item advantages__item--gagarin">Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--gift">Поставляется в подарочной упаковке</li>
+      </section>
+      <!-- advantages -->
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+        <ul class="reviews__wrapper slider">
+          <li class="reviews__item slider__item">
+            <blockquote class="reviews__content">
+              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <cite class="reviews__author">
+                Анастасия Красильникова
+                <span class="reviews__username">@misssssiskras</span>
+              </cite>
+            </blockquote>
+          </li>
+        </ul>
+        <button class="reviews__control reviews__control--prev slider__control" type="button">Предыдущий отзыв</button>
+        <button class="reviews__control reviews__control--next slider__control" type="button">Следующий отзыв</button>
+        <a class="reviews__feedback button" href="#">Написать</a>
+      </section>
+      <!-- reviews -->
+      <address class="contacts">
+        <dl class="contacts__info">
+          <dt class="contacts__item">e-mail:</dt>
+          <dd class="contacts__data">
+              <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </dd>
+          <dt class="contacts__item">адрес:</dt>
+          <dd class="contacts__data">
+            <p class="contacts__location">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          </dd>
+        </dl>
+        <figure class="contacts__map">
+          <figcaption class="contacts__map-desc visually-hidden">
+            Расположение магазина &laquo;Мишка&raquo; на карте
+          </figcaption>
+          <img class="contacts__map" src="http://placehold.it/320x475" width="320" height="475" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </figure>
+        <a class="contacts__write-us button" href="#">Напишите нам</a>
+      </address>
+      <!-- contacts -->
+    </main>
 
+    <footer class="page-footer">
+      <div class="page-footer__socials socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--in" href="#">Инстаграм</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="#">Фейсбук</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--tw" href="#">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"  target="_blank">
+          <img class="copyright__logo-image" src="http://placehold.it/27x34" width="27" height="34" alt="Лого HTML Academy">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
