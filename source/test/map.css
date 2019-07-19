@@ -1,0 +1,19 @@
+.map {
+  min-width: 320px;
+  margin: 0;
+}
+
+.map__wrapper {
+  margin: 0 auto;
+  position: relative;
+}
+
+.map__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.js-hide {
+  display: none;
+}
