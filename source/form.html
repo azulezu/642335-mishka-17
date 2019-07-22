@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="MISHKA">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle main-nav__toggle--dropdown" type="button">Развернуть меню</button>
+        <div class="main-nav__wrapper main-nav__wrapper--dropdown">
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item">
+              <a  class="main-nav__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a  class="main-nav__link">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="main-nav__item">
+              <a  class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item">
+              <a  class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пусто</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title">Вязание на заказ</h1>
+      <p class="order-form__explaining">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form class="order-form" action="http://echo.htmlacademy.ru" method="post">
+        <button class="order-form__submit button" type="submit">Отправить заказ</button>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__socials socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--in" href="#">Инстаграм</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="#">Фейсбук</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--tw" href="#">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"  target="_blank">
+          <img class="copyright__logo-image" src="http://placehold.it/27x34" width="27" height="34" alt="Лого HTML Academy">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
