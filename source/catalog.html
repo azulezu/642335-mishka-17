@@ -122,5 +122,33 @@
         </a>
       </div>
     </footer>
+
+    <section class="modal order">
+      <h2 class="order-title">Добавить в корзину</h2>
+      <p class="order__line">Выберите размер:</p>
+      <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="order__sizes-list">
+          <li class="order__sizes-item">
+            <label class="order__sizes-button order__sizes-button-s">
+              <input class="visually-hidden" type="radio" name="size" value="S" checked>S
+            </label>
+          </li>
+          <li class="order__sizes-item">
+            <label class="order__sizes-button order__sizes-button-m">
+              <input class="visually-hidden" type="radio" name="size" value="M">M
+            </label>
+          </li>
+          <li class="order__sizes-item">
+            <label class="order__sizes-button order__sizes-button-L">
+              <input class="visually-hidden" type="radio" name="size" value="L">L
+            </label>
+          </li>
+        </ul>
+        <button class="order__submit button" type="submit">Добавить</button>
+      </form>
+    </section>
+    <div class="modal__overlay"></div>
+    <!-- modal -->
+
   </body>
 </html>
