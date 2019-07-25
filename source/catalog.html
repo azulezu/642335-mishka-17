@@ -96,6 +96,7 @@
           <source src="#">
         </video>
         <button class="video-block__control" type="button"><span class="visually-hidden">Play</span></button>
+        <p class="video-block__line">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="video-block__order-button button" href="form.html">Сделать заказ</a>
       </article>
       <!-- video-block -->
@@ -123,31 +124,32 @@
       </div>
     </footer>
 
-    <section class="modal order">
-      <h2 class="order-title">Добавить в корзину</h2>
-      <p class="order__line">Выберите размер:</p>
-      <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
-        <ul class="order__sizes-list">
-          <li class="order__sizes-item">
-            <label class="order__sizes-button order__sizes-button-s">
-              <input class="visually-hidden" type="radio" name="size" value="S" checked>S
-            </label>
-          </li>
-          <li class="order__sizes-item">
-            <label class="order__sizes-button order__sizes-button-m">
-              <input class="visually-hidden" type="radio" name="size" value="M">M
-            </label>
-          </li>
-          <li class="order__sizes-item">
-            <label class="order__sizes-button order__sizes-button-L">
-              <input class="visually-hidden" type="radio" name="size" value="L">L
-            </label>
-          </li>
-        </ul>
-        <button class="order__submit button" type="submit">Добавить</button>
-      </form>
+    <section class="modal add">
+      <div class="modal__overlay">
+        <h2 class="add__title">Добавить в корзину</h2>
+        <p class="add__line">Выберите размер:</p>
+        <form class="add__form" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="add__sizes-list">
+            <li class="add__sizes-item">
+              <label class="add__sizes-button add__sizes-button-s">
+                <input class="visually-hidden" type="radio" name="size" value="S" checked><span>S</span>
+              </label>
+            </li>
+            <li class="add__sizes-item">
+              <label class="add__sizes-button add__sizes-button-m">
+                <input class="visually-hidden" type="radio" name="size" value="M"><span>M</span>
+              </label>
+            </li>
+            <li class="add__sizes-item">
+              <label class="add__sizes-button add__sizes-button-L">
+                <input class="visually-hidden" type="radio" name="size" value="L"><span>L</span>
+              </label>
+            </li>
+          </ul>
+          <button class="add__submit button" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
-    <div class="modal__overlay"></div>
     <!-- modal -->
 
   </body>

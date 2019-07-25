@@ -70,7 +70,7 @@
           <img class="hit__img trending__img" src="https://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
           <p class="hit__price-line trending__tag-center">Цена:<span class="hit__price">990 руб.</span></p>
         </article>
-        <a class="trending__order-button button" href="order.html">Заказать</a>
+        <a class="trending__order-button button" href="form.html">Заказать</a>
       </section>
       <!-- trending -->
       <section class="advantages">
@@ -117,7 +117,7 @@
         </dl>
         <figure class="contacts__map map">
           <div class="map__wrapper">
-            <iframe class="map__iframe" width="320" height="457" style="border:0" allowfullscreen>
+            <iframe class="map__iframe" allowfullscreen>
             </iframe>
               <img class="map__img" src="img/map-mobile.png" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </div>
@@ -152,31 +152,32 @@
       </div>
     </footer>
 
-    <section class="modal order">
-      <h2 class="order-title">Добавить в корзину</h2>
-      <p class="order__line">Выберите размер:</p>
-      <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
-        <ul class="order__sizes-list">
-          <li class="order__sizes-item">
-            <label class="order__sizes-button order__sizes-button-s">
-              <input class="visually-hidden" type="radio" name="size" value="S" checked>S
-            </label>
-          </li>
-          <li class="order__sizes-item">
-            <label class="order__sizes-button order__sizes-button-m">
-              <input class="visually-hidden" type="radio" name="size" value="M">M
-            </label>
-          </li>
-          <li class="order__sizes-item">
-            <label class="order__sizes-button order__sizes-button-L">
-              <input class="visually-hidden" type="radio" name="size" value="L">L
-            </label>
-          </li>
-        </ul>
-        <button class="order__submit button" type="submit">Добавить</button>
-      </form>
+    <section class="modal add">
+      <div class="modal__overlay">
+        <h2 class="add__title">Добавить в корзину</h2>
+        <p class="add__line">Выберите размер:</p>
+        <form class="add__form" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="add__sizes-list">
+            <li class="add__sizes-item">
+              <label class="add__sizes-button add__sizes-button-s">
+                <input class="visually-hidden add__sizes-input" type="radio" name="size" value="S" checked><span class="add__size">S</span>
+              </label>
+            </li>
+            <li class="add__sizes-item">
+              <label class="add__sizes-button add__sizes-button-m">
+                <input class="visually-hidden add__sizes-input" type="radio" name="size" value="M"><span class="add__size">M</span>
+              </label>
+            </li>
+            <li class="add__sizes-item">
+              <label class="add__sizes-button add__sizes-button-L">
+                <input class="visually-hidden add__sizes-input" type="radio" name="size" value="L"><span class="add__size">L</span>
+              </label>
+            </li>
+          </ul>
+          <button class="add__submit button" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
-    <div class="modal__overlay"></div>
     <!-- modal -->
 
     <!-- <script src="test/map.js"></script> -->
