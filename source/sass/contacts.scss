@@ -1,0 +1,30 @@
+.contacts__title {
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
+
+  font-size: 18px;
+}
+
+.contacts__info {
+  margin: 0;
+  padding-right: $mobile-padding;
+  padding-bottom: 30px;
+  padding-left: $mobile-padding;
+}
+
+.contacts__data {
+  margin: 0;
+}
+
+.contacts__email {
+  padding-bottom: 4px;
+
+  color: $text-color;
+
+  border-bottom: 1px solid $dull-turquoise;
+}
+
+.contacts__map {
+  margin: 0;
+  margin-bottom: 40px;
+}

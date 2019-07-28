@@ -1,0 +1,53 @@
+.add__title {
+  text-align: center;
+  white-space: pre-line;
+}
+
+.add__line {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.add__sizes-list {
+  @include no-list();
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.add__sizes-button {
+  display: block;
+  width: 82px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  text-align: center;
+
+  border: 2px solid $charcoal;
+}
+
+.add__size {
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.add__submit {
+  @include button($fade-turquoise);
+  color: white;
+  background-color: $fade-turquoise;
+
+  &:hover {
+    margin-top: -5px;
+    padding-bottom: 21px;
+
+    color: rgba(white, $chiffon);
+  }
+
+  &:active {
+    color: change-color(white, $alpha: $tulle);
+
+    background-color: $teal;
+  }
+}
