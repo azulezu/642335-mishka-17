@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+body {
+  min-width: $mobile-width;
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: $default-font;
+  color: $text-color;
+
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+// MIXINS
+@mixin no-list() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin button($border-color, $color: $border-color, $bkg: white) {
+  display: block;
+  width: 100%;
+  padding: 14px;
+
+  text-align: center;
+  color: $color;
+  text-transform: uppercase;
+
+  background: $bkg;
+  border: 2px solid $border-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: white;
+
+    background-color: $border-color;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(white, $tulle);
+
+    background-color: $border-color;
+  }
+}

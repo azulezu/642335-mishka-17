@@ -1,0 +1,24 @@
+.catalog__title {
+  margin-bottom: 30px;
+}
+
+.catalog__list {
+  @include no-list();
+  display: flex;
+  flex-direction: column;
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+
+  border: 1px solid $light-pearl;
+}
+
+.catalog__article-title {
+  font-size: 17px;
+  line-height: 24px;
+  font-family: $default-font;
+  color: $big-text-color;
+}

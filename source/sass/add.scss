@@ -1,0 +1,69 @@
+.add {
+  padding-top: 37px;
+  padding-right: $mobile-padding;
+  padding-bottom: 46px;
+  padding-left: $mobile-padding;
+}
+
+.add__title {
+  text-align: center;
+  text-transform: uppercase;
+  white-space: pre-line;
+}
+
+.add__line {
+  font-size: 17px;
+  text-align: center;
+}
+
+.add__sizes-list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include no-list();
+}
+
+.add__sizes-button .add__size {
+  display: block;
+  width: 82px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  text-align: center;
+
+  border: 2px solid $light-pearl;
+
+  &:focus,
+  &:hover {
+    border: 2px solid $pearl;
+  }
+}
+
+.add__sizes-button input:checked ~ .add__size {
+  border: 2px solid $fade-turquoise;
+}
+
+.add__size {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.add__submit {
+  @include button($fade-turquoise, white, $fade-turquoise);
+
+  &:hover {
+    margin-top: -5px;
+    padding-bottom: 19px;
+
+    // color: rgba(white, $chiffon);
+  }
+
+  &:active {
+    // color: change-color(white, $alpha: $tulle);
+    // background-color: $teal;
+  }
+}
