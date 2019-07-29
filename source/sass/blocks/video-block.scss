@@ -1,0 +1,14 @@
+.video-block {
+  padding: 30px $mobile-padding;
+
+  border: 1px solid $light-pearl;
+}
+
+.video-block__title {
+  margin-bottom: 30px;
+  padding-left: 90px;
+
+  font-weight: bold;
+
+  background: url("../img/icon-video.svg") 30px center no-repeat;
+}

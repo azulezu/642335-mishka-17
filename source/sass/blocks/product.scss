@@ -8,23 +8,20 @@
 
 .product__details {
   margin: 0;
-  padding: 0;
-  padding-right: 28px;
-  padding-left: 28px;
+  padding: 0 28px;
 }
 
 .product__property {
   position: relative;
-
   display: inline-block;
-
   font-size: 0;
   line-height: 24px;
 
-  &--divider-comma::after {
-    content: ", ";
-
-    font-size: 13px;
+  &--divider-comma {
+    &::after {
+      content: ", ";
+      font-size: 13px;
+    }
   }
 }
 
@@ -55,9 +52,7 @@
   margin: 0;
   padding: 0;
 
-  background-color: $blanc;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: $blanc center no-repeat;
   border: none;
 
   &:focus,

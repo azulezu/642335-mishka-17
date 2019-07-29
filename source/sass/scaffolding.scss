@@ -49,39 +49,3 @@ img {
 a {
   text-decoration: none;
 }
-
-// MIXINS
-@mixin no-list() {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-@mixin button($border-color, $color: $border-color, $bkg: white) {
-  display: block;
-  width: 100%;
-  padding: 14px;
-
-  text-align: center;
-  color: $color;
-  text-transform: uppercase;
-
-  background: $bkg;
-  border: 2px solid $border-color;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: white;
-
-    background-color: $border-color;
-    outline: none;
-  }
-
-  &:active {
-    color: rgba(white, $tulle);
-
-    background-color: $border-color;
-  }
-}

@@ -1,8 +1,5 @@
 .add {
-  padding-top: 37px;
-  padding-right: $mobile-padding;
-  padding-bottom: 46px;
-  padding-left: $mobile-padding;
+  padding: 37px $mobile-padding 46px;
 }
 
 .add__title {

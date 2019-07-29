@@ -1,7 +1,8 @@
 .main-nav__list {
-  @include no-list();
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
+
+  @include no-list();
 }
 
 .main-nav__item {
@@ -18,15 +19,11 @@
   color: $big-text-color;
 
   &--search {
-    background-image: url("../img/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: left center;
+    background: url("../img/icon-search.svg") left center no-repeat;
   }
 
   &--cart {
-    background-image: url("../img/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-position: left center;
+    background: url("../img/icon-cart.svg") left center no-repeat;
   }
 }
 
@@ -37,10 +34,7 @@
   margin: 0;
   padding: 0;
 
-  background-color: white;
-  background-image: url("../img/icon-menu-close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: white url("../img/icon-menu-close.svg") center no-repeat;
   border: none;
 
   &:focus,

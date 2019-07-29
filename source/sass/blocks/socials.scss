@@ -8,30 +8,31 @@
   justify-content: center;
 }
 
+.socials__item {
+  margin-right: 30px;
+}
+
+.socials__item:last-of-type {
+  margin-right: 0;
+}
+
 .socials__link {
   display: block;
   width: 28px;
   height: 28px;
-  margin-right: 30px;
 
   background-repeat: no-repeat;
   background-position: center;
 
   &--in {
-    margin-right: 30px;
-
     background-image: url("../img/icon-insta.svg");
   }
 
   &--fb {
-    margin-right: 30px;
-
     background-image: url("../img/icon-fb.svg");
   }
 
   &--tw {
-    margin-right: 0;
-
     background-image: url("../img/icon-twitter.svg");
   }
 }

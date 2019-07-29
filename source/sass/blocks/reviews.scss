@@ -1,8 +1,5 @@
 .reviews {
-  padding-top: 30px;
-  padding-right: $mobile-padding;
-  padding-bottom: 30px;
-  padding-left: $mobile-padding;
+  padding: 30px $mobile-padding;
 }
 
 .reviews__title {
@@ -10,8 +7,9 @@
 }
 
 .reviews__wrapper {
-  @include no-list();
   margin-bottom: 30px;
+
+  @include no-list();
 }
 
 .reviews__content {
@@ -45,7 +43,7 @@
   border-collapse: collapse;
 }
 
-.reviews__control div {
+.reviews__control-wrap {
   display: table-cell;
   width: 50%;
 
@@ -56,13 +54,8 @@
   display: block;
   width: 100%;
   height: 50px;
-  // display:table-cell;
-  // border: 1px solid $light-pearl;
-  // width: 50%;
 
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: transparent center no-repeat;
   border: none;
 
   &:hover,
