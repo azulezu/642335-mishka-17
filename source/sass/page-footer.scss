@@ -1,17 +1,16 @@
 .page-footer {
+  margin: 0 auto;
   background-color: #f1f1f1;
   padding-top: 23px;
   padding-bottom: 23px;
 }
 
 .page-footer__socials {
-  margin: 0;
-  padding-right: $mobile-padding;
-  padding-left: $mobile-padding;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .page-footer__copyright {
-  margin: 0;
-  padding-right: $mobile-padding;
-  padding-left: $mobile-padding;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

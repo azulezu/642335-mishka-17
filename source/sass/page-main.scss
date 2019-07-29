@@ -1,9 +1,9 @@
 .page-main {
-  padding-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .page-main__title {
-  margin: 0;
+  margin: auto;
   padding: 0;
   padding-top: 76px;
   padding-bottom: 78px;
@@ -11,12 +11,11 @@
   font-size: 27px;
   text-align: center;
   color: $big-text-color;
-
   background-color: $blanc;
 }
 
 .page-main__section-title {
-  margin: 0;
+  margin: auto;
 
   font-weight: bold;
   font-size: 25px;

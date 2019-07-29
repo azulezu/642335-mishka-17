@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header wrapper">
     <a class="page-header__logo">
       <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
     </a>
@@ -54,7 +54,7 @@
       </ul>
     </section>
     <!-- assortment -->
-    <section class="trending">
+    <section class="trending wrapper">
       <h2 class="visually-hidden">Популярные товары</h2>
       <article class="trending__item hit">
         <h3 class="page-main__section-title hit__name">Вязаные корзинки</h3>
@@ -81,7 +81,7 @@
     </section>
     <!-- trending -->
     <div class="page-main__curly-divider"></div>
-    <section class="advantages">
+    <section class="advantages wrapper">
       <h2 class="page-main__section-title advantages__title">Коротко о нас:</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
@@ -93,7 +93,7 @@
       </ul>
     </section>
     <!-- advantages -->
-    <section class="reviews">
+    <section class="reviews wrapper">
       <h2 class="page-main__section-title reviews__title">Отзывы</h2>
       <ul class="reviews__wrapper slider">
         <li class="reviews__item slider__item">
@@ -120,7 +120,7 @@
     <!-- reviews -->
     <div class="page-main__curly-divider"></div>
     <section class="contacts">
-      <h2 class="contacts__title page-main__section-title">Контакты</h2>
+      <h2 class="contacts__title page-main__section-title wrapper">Контакты</h2>
       <dl class="contacts__info">
         <dt class="contacts__item">e-mail:</dt>
         <dd class="contacts__data">
@@ -141,7 +141,7 @@
           Расположение магазина &laquo;Мишка&raquo; на карте
         </figcaption>
       </figure>
-      <a class="contacts__write-us button" href="feedback.html">Напишите нам</a>
+      <a class="contacts__write-us button wrapper" href="feedback.html">Напишите нам</a>
     </section>
     <!-- contacts -->
   </main>
@@ -168,33 +168,38 @@
     </div>
   </footer>
 
-  <section class="modal add">
-    <div class="modal__overlay">
-      <h2 class="add__title page-main__section-title">Добавить
-        в корзину</h2>
-      <p class="add__line">Выберите размер:</p>
-      <form class="add__form" action="https://echo.htmlacademy.ru" method="post">
+  <div class="modal js-class__hide modal__overlay">
+    <div class="modal__content ">
+      <section class="add wrapper">
+        <h2 class="page-main__section-title add__title">Добавить
+          в корзину</h2>
+        <p class="add__line">Выберите размер:</p>
+        <form class="add__form" action="https://echo.htmlacademy.ru" method="post">
         <ul class="add__sizes-list">
           <li class="add__sizes-item">
-            <label class="add__sizes-button add__sizes-button-s">
-              <input class="visually-hidden add__sizes-input" type="radio" name="size" value="S" checked><span class="add__size">S</span>
+            <label class="add__sizes-button">
+              <input class="visually-hidden" type="radio" name="size" value="S" checked>
+              <span class="add__size">S</span>
             </label>
           </li>
           <li class="add__sizes-item">
-            <label class="add__sizes-button add__sizes-button-m">
-              <input class="visually-hidden add__sizes-input" type="radio" name="size" value="M"><span class="add__size">M</span>
+            <label class="add__sizes-button">
+              <input class="visually-hidden" type="radio" name="size" value="M">
+              <span class="add__size">M</span>
             </label>
           </li>
           <li class="add__sizes-item">
-            <label class="add__sizes-button add__sizes-button-L">
-              <input class="visually-hidden add__sizes-input" type="radio" name="size" value="L"><span class="add__size">L</span>
+            <label class="add__sizes-button">
+              <input class="visually-hidden" type="radio" name="size" value="L">
+              <span class="add__size">L</span>
             </label>
           </li>
         </ul>
         <button class="add__submit button" type="submit">Добавить</button>
       </form>
+      </section>
     </div>
-  </section>
+  </div>
   <!-- modal -->
 
   <script src="../js/map.js"></script>

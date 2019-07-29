@@ -28,8 +28,7 @@ input[type="radio"].visually-hidden {
 }
 
 body {
-  width: 320px;
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0;
   padding: 0;
 
@@ -51,7 +50,6 @@ a {
   text-decoration: none;
 }
 
-
 // MIXINS
 @mixin no-list() {
   margin: 0;
@@ -60,7 +58,7 @@ a {
   list-style: none;
 }
 
-@mixin button($color) {
+@mixin button($border-color, $color: $border-color, $bkg: white) {
   display: block;
   width: 100%;
   padding: 14px;
@@ -69,21 +67,21 @@ a {
   color: $color;
   text-transform: uppercase;
 
-  background: none;
-  border: 2px solid $color;
+  background: $bkg;
+  border: 2px solid $border-color;
   cursor: pointer;
 
   &:hover,
   &:focus {
     color: white;
 
-    background-color: $color;
+    background-color: $border-color;
     outline: none;
   }
 
   &:active {
     color: rgba(white, $tulle);
 
-    background-color: $color;
+    background-color: $border-color;
   }
 }

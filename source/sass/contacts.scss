@@ -1,12 +1,12 @@
 .contacts__title {
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
-
   font-size: 18px;
 }
 
 .contacts__info {
-  margin: 0;
+  margin: 0 auto;
+  width: $mobile-width;
   padding-right: $mobile-padding;
   padding-bottom: 30px;
   padding-left: $mobile-padding;

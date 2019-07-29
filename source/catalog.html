@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header wrapper">
     <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
     </a>
@@ -40,10 +40,11 @@
     <h1 class="visually-hidden">Каталог товаров интернет-магазина &laquo;Мишка&raquo;</h1>
     <section class="catalog">
       <h2 class="catalog__title page-main__title">Каталог товаров</h2>
-      <ul class="catalog__list">
+      <div class="wrapper">
+        <ul class="catalog__list">
         <li class="catalog__item product">
           <img class="product__img" src="https://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h3 class="product__name">Зайчик-попрыгайчик</h3>
+          <h3 class="product__name catalog__article-title">Зайчик-попрыгайчик</h3>
           <dl class="product__details">
             <div class="product__property product__property--divider-comma">
               <dt class="product__property-name">Рост</dt>
@@ -60,7 +61,7 @@
 
         <li class="catalog__item product">
           <img class="product__img" src="https://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
-          <h3 class="product__name">Корзинка для белья</h3>
+          <h3 class="product__name catalog__article-title">Корзинка для белья</h3>
           <dl class="product__details">
             <div class="product__property product__property--divider-comma">
               <dt class="product__property-name">Диаметр </dt>
@@ -77,7 +78,7 @@
 
         <li class="catalog__item product">
           <img class="product__img" src="https://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
-          <h3 class="product__name">Большая корзинка для игрушек</h3>
+          <h3 class="product__name catalog__article-title">Большая корзинка для игрушек</h3>
           <dl class="product__details">
             <div class="product__property product__property--divider-comma">
               <dt class="product__property-name">Диаметр </dt>
@@ -92,10 +93,11 @@
           <a class="product__add" href="#"><span class="visually-hidden">Добавить в корзину</span></a>
         </li>
       </ul>
+      </div>
     </section>
     <!-- catalog -->
-    <article class="video-block">
-      <h2 class="video-block__title">Процесс производства</h2>
+    <article class="video-block wrapper">
+      <h2 class="video-block__title catalog__article-title">Процесс производства</h2>
       <video width="260" height="150" poster="https://placehold.it/260x150">
         <source src="#">
       </video>
@@ -128,32 +130,38 @@
     </div>
   </footer>
 
-  <section class="modal add">
-    <div class="modal__overlay">
-      <h2 class="add__title">Добавить в корзину</h2>
-      <p class="add__line">Выберите размер:</p>
-      <form class="add__form" action="https://echo.htmlacademy.ru" method="post">
+  <div class="modal js-class__hide modal__overlay">
+    <div class="modal__content ">
+      <section class="add wrapper">
+        <h2 class="page-main__section-title add__title">Добавить
+          в корзину</h2>
+        <p class="add__line">Выберите размер:</p>
+        <form class="add__form" action="https://echo.htmlacademy.ru" method="post">
         <ul class="add__sizes-list">
           <li class="add__sizes-item">
-            <label class="add__sizes-button add__sizes-button-s">
-              <input class="visually-hidden" type="radio" name="size" value="S" checked><span>S</span>
+            <label class="add__sizes-button">
+              <input class="visually-hidden" type="radio" name="size" value="S" checked>
+              <span class="add__size">S</span>
             </label>
           </li>
           <li class="add__sizes-item">
-            <label class="add__sizes-button add__sizes-button-m">
-              <input class="visually-hidden" type="radio" name="size" value="M"><span>M</span>
+            <label class="add__sizes-button">
+              <input class="visually-hidden" type="radio" name="size" value="M">
+              <span class="add__size">M</span>
             </label>
           </li>
           <li class="add__sizes-item">
-            <label class="add__sizes-button add__sizes-button-L">
-              <input class="visually-hidden" type="radio" name="size" value="L"><span>L</span>
+            <label class="add__sizes-button">
+              <input class="visually-hidden" type="radio" name="size" value="L">
+              <span class="add__size">L</span>
             </label>
           </li>
         </ul>
         <button class="add__submit button" type="submit">Добавить</button>
       </form>
+      </section>
     </div>
-  </section>
+  </div>
   <!-- modal -->
 
 </body>
