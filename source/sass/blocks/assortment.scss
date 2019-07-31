@@ -24,21 +24,26 @@
   @include no-list();
 }
 
-.assortment__item {
+.assortment__link {
   display: block;
+  min-height: 103px;
+
   color: rgba(white, $chiffon);
 
   &:hover {
     margin-top: -5px;
     padding-bottom: 5px;
+    color: white;
+  }
+
+  &:active {
+    color: change-color(white, $alpha: $tulle);
   }
 
   &--decor {
     background-color: $fade-turquoise;
 
     &:hover {
-      color: white;
-
       background-color: $turquoise;
     }
 
@@ -51,8 +56,6 @@
     background-color: $fade-teal;
 
     &:hover {
-      color: white;
-
       background-color: $teal;
     }
 
@@ -62,20 +65,15 @@
   }
 }
 
-.assortment__link {
-  display: block;
-  min-height: 103px;
+.assortment__category {
   margin: 0 auto;
-  padding: 25px 112px 30px 30px;
+  display: block;
   width: $mobile-width;
+
+  padding: 25px 112px $mobile-padding 30px;
 
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   font-family: $default-font;
-  color: inherit;
-
-  &:active {
-    color: change-color(white, $alpha: $tulle);
-  }
 }
