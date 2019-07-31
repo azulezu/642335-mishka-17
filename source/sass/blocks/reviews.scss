@@ -1,15 +1,15 @@
 .reviews {
-  padding: 30px $mobile-padding;
+  padding: 20px $mobile-padding 50px;
 }
 
 .reviews__title {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .reviews__wrapper {
-  margin-bottom: 30px;
-
   @include no-list();
+  margin-bottom: 35px;
+  margin-top: 15px;
 }
 
 .reviews__content {
@@ -18,7 +18,7 @@
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   line-height: 30px;
 }
@@ -31,7 +31,11 @@
 }
 
 .reviews__username {
+  display: inline-block;
+  margin-top: 5px;
+
   font-weight: normal;
+  vertical-align: top;
   color: $text-color;
 }
 

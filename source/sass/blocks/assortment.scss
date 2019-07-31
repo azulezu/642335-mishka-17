@@ -5,10 +5,10 @@
 }
 
 .assortment__banner {
-  min-height: 283px;
-  padding-top: 74px;
+  min-height: 282px;
+  padding-top: 70px;
 
-  background: url("../img/hero-mobile@1x.jpg") center -17px no-repeat;
+  background: url("../img/hero-mobile@1x.jpg") center -18px no-repeat;
   background-size: 575px auto;
 }
 
@@ -24,21 +24,13 @@
   @include no-list();
 }
 
-.assortment__link {
+.assortment__item {
   display: block;
-  min-height: 103px;
-  padding: 30px;
-  padding-right: 112px;
-
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
-  font-family: $default-font;
   color: rgba(white, $chiffon);
 
   &:hover {
     margin-top: -5px;
-    padding-bottom: 35px;
+    padding-bottom: 5px;
   }
 
   &--decor {
@@ -51,8 +43,6 @@
     }
 
     &:active {
-      color: change-color(white, $alpha: $tulle);
-
       background-color: $turquoise;
     }
   }
@@ -67,9 +57,25 @@
     }
 
     &:active {
-      color: change-color(white, $alpha: $tulle);
-
       background-color: $teal;
     }
+  }
+}
+
+.assortment__link {
+  display: block;
+  min-height: 103px;
+  margin: 0 auto;
+  padding: 25px 112px 30px 30px;
+  width: $mobile-width;
+
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  font-family: $default-font;
+  color: inherit;
+
+  &:active {
+    color: change-color(white, $alpha: $tulle);
   }
 }

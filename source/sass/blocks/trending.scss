@@ -1,5 +1,5 @@
 .trending {
-  padding: 30px $mobile-padding;
+  padding: 27px $mobile-padding;
 }
 
 .trending__title {
@@ -8,10 +8,6 @@
   line-height: 20px;
   color: $fade-turquoise;
   text-transform: uppercase;
-
-  &--hit {
-    text-align: left;
-  }
 }
 
 .trending__line {
@@ -20,4 +16,15 @@
   &--center {
     text-align: center;
   }
+
+  &--title {
+    margin-top: 5px;
+    margin-bottom: 23px;
+    text-align: left;
+  }
+}
+
+.trending__img {
+  width: calc(#{$mobile-width} - 2 * #{$mobile-padding});
+  margin-bottom: 15px;
 }

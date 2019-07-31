@@ -1,15 +1,17 @@
 .advantages {
-  padding: 30px $mobile-padding;
+  padding: 35px $mobile-padding;
 }
 
 .advantages__list {
   @include no-list();
+  margin-top: 5px;
 }
 
 .advantages__item {
   position: relative;
 
-  padding-top: 60px;
+  padding-top: 83px;
+  padding-right: 10px;
 
   font-weight: bold;
   font-size: 17px;
@@ -20,8 +22,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 3px;
 
     width: 60px;
     height: 60px;
