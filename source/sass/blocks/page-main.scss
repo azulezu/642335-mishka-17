@@ -13,7 +13,7 @@
 }
 
 .page-main__section-title {
-  margin: auto;
+  // margin: auto;
 
   font-weight: bold;
   font-size: 25px;
@@ -26,5 +26,35 @@
   display: block;
   height: 6px;
 
-  background: url("../img/bg-zigzag-line.svg") auto 100%;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: auto 100%;
+}
+
+.page-main__zigzag-divider {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__section-title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-main__zigzag-divider {
+    display: block;
+    height: 24px;
+    margin-top: -12px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: auto 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page-main__zigzag-divider {
+    height: 34px;
+    margin-top: -18px;
+  }
 }

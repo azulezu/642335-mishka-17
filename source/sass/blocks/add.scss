@@ -19,7 +19,9 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
-  @include no-list();
+  margin: auto;
+  padding: 0;
+  list-style: none;
 }
 
 .add__sizes-button .add__size {

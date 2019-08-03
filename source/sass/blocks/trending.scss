@@ -28,3 +28,37 @@
   width: calc(#{$mobile-width} - 2 * #{$mobile-padding});
   margin-bottom: 15px;
 }
+
+@media (min-width: $tablet-width) {
+  .trending {
+    padding: 0 $tablet-padding;
+    position: relative;
+  }
+
+  .trending__title {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 17px;
+    width: 80px;
+    text-align: center;
+  }
+
+  .trending__order-button {
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .trending {
+    padding: 0;
+    padding-left: $desktop-padding;
+  }
+
+  .trending__title {
+    left: 0;
+    right: auto;
+  }
+
+  .trending__order-button {
+  }
+}

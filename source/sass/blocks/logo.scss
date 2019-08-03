@@ -1,0 +1,23 @@
+.logo {
+  &--header {
+    text-align: center;
+  }
+
+  &--footer {
+    display: none;
+  }
+}
+
+.logo-image {
+  width: 86px;
+  height: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    &--footer {
+      display: block;
+      margin-right: auto;
+    }
+  }
+}

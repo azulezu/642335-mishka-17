@@ -1,5 +1,6 @@
 .assortment {
   margin: 0 auto;
+  margin-bottom: 30px;
 
   background-color: $light-blanc;
 }
@@ -13,15 +14,15 @@
 }
 
 .assortment__title {
-  font-size: 27px;
   text-align: center;
-  white-space: pre-line;
-
   background-color: transparent;
+  margin: 0 auto;
 }
 
 .assortment__list {
-  @include no-list();
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .assortment__link {
@@ -70,10 +71,50 @@
   display: block;
   width: $mobile-width;
 
-  padding: 25px 112px $mobile-padding 30px;
+  padding: 25px 112px 30px $mobile-padding;
 
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   font-family: $default-font;
+}
+
+@media (max-width: $tablet-width) {
+  .assortment__title {
+    font-size: 27px;
+    white-space: pre-line;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .assortment {
+    margin-bottom: 30px;
+  }
+
+  .assortment__title {
+    width: 500.9px;
+  }
+
+  .assortment__banner {
+    min-height: 500.9px;
+    background: url("../img/hero-tablet@1x.jpg") center no-repeat;
+    background-size: 999.9px auto;
+  }
+
+  .assortment__list {
+    display: flex;
+    padding: 0 $tablet-padding;
+    width: $tablet-width;
+  }
+
+  .assortment__item {
+    flex-grow: 1;
+  }
+
+  .assortment__category {
+    width: auto;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 30px 112px 20px 30px;
+  }
 }

@@ -30,3 +30,9 @@
     left: 140px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .map {
+    flex-grow: 1;
+  }
+}

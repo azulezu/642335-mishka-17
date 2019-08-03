@@ -3,7 +3,10 @@
 }
 
 .catalog__list {
-  @include no-list();
+  margin: auto;
+  padding: 0;
+  list-style: none;
+
   display: flex;
   flex-direction: column;
   padding-right: $mobile-padding;
