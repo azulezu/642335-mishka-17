@@ -3,18 +3,17 @@
 }
 
 .page-main__title {
-  margin: auto;
-  padding: 76px 0 78px;
+  margin: 0;
 
   font-size: 27px;
   text-align: center;
   color: $big-text-color;
+
   background-color: $blanc;
 }
 
 .page-main__section-title {
-  margin: auto;
-
+  // margin: auto;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
@@ -26,5 +25,62 @@
   display: block;
   height: 6px;
 
-  background: url("../img/bg-zigzag-line.svg") auto 100%;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: auto 100%;
+}
+
+.page-main__zigzag-divider {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main {
+    margin-bottom: 60px;
+  }
+
+  .page-main__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-main__section-title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-main__curly-divider {
+    height: 15px;
+  }
+
+  .page-main__zigzag-divider {
+    // position: relative;
+    z-index: 1;
+
+    display: block;
+    height: 23px;
+    margin-top: -12px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: auto 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    margin-bottom: 103px;
+  }
+
+  .page-main__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-main__curly-divider {
+    height: 23px;
+  }
+
+  .page-main__zigzag-divider {
+    height: 34px;
+    margin-top: -18px;
+  }
 }

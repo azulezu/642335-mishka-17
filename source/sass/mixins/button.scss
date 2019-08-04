@@ -11,8 +11,8 @@
   border: 2px solid $border-color;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     color: white;
 
     background-color: $border-color;
@@ -23,5 +23,9 @@
     color: rgba(white, $tulle);
 
     background-color: $border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 40px;
   }
 }
