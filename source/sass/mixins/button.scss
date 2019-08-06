@@ -1,4 +1,4 @@
-@mixin button($border-color, $color: $border-color, $bkg: white) {
+@mixin button($border-color, $color: $border-color, $bkg: #ffffff) {
   display: block;
   width: 100%;
   padding: 14px;
@@ -13,14 +13,14 @@
 
   &:focus,
   &:hover {
-    color: white;
+    color: #ffffff;
 
     background-color: $border-color;
     outline: none;
   }
 
   &:active {
-    color: rgba(white, $tulle);
+    color: rgba(#ffffff, $tulle);
 
     background-color: $border-color;
   }

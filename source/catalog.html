@@ -11,33 +11,39 @@
 </head>
 
 <body>
-  <header class="page-header wrapper">
-    <a class="logo" href="index.html">
-      <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
-    </a>
-    <nav class="main-nav">
+  <header class="page-header">
+    <nav class="page-header-block main-nav wrapper">
+      <a class="logo logo--header" href="index.html">
+        <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
+      </a>
       <button class="main-nav__toggle main-nav__toggle--dropdown" type="button" aria-label="Развернуть меню"></button>
-      <div class="main-nav__wrapper main-nav__wrapper--dropdown">
-        <ul class="main-nav__list site-list">
-          <li class="main-nav__item">
-            <a class="main-nav__link">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пусто</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__menu main-nav__menu--site">
+        <li class="main-nav__item">
+          <a class="main-nav__link">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-nav__menu main-nav__menu--user">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--search" href="#"><span class="main-nav__link-text">Поиск по сайту</span></a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="main-nav__menu main-nav__menu--offers">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <a class="main-nav__line main-nav__line--delivery" href="#">Бесплатная доставка по России</a>
     </nav>
   </header>
-
   <main class="page-main">
     <h1 class="visually-hidden">Каталог товаров интернет-магазина &laquo;Мишка&raquo;</h1>
     <section class="catalog">

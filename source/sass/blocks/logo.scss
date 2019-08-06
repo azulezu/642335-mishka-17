@@ -1,7 +1,6 @@
 .logo {
-  &--header {
-    text-align: center;
-  }
+  display: block;
+  align-self: center;
 
   &--footer {
     display: none;
@@ -15,9 +14,31 @@
 
 @media (min-width: $tablet-width) {
   .logo {
+    &--header {
+      order: 1;
+    }
+
     &--footer {
       display: block;
       margin-right: auto;
     }
+  }
+
+  .logo--header .logo-image {
+    width: 112px;
+    height: 46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo--header {
+    order: 2;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+
+  .logo--header .logo-image {
+    width: 148px;
+    height: 73px;
   }
 }
