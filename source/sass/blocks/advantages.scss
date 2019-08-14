@@ -1,10 +1,16 @@
 .advantages {
-  padding: 35px $mobile-padding;
+  padding: 28px $mobile-padding 55px;
+}
+
+.advantages__title {
+  margin: 0 0 5px -2px;
 }
 
 .advantages__list {
-  @include no-list();
-  margin-top: 5px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .advantages__item {
@@ -23,7 +29,7 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 3px;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -59,5 +65,86 @@
   &--gift::before {
     background-image: url("../img/icon-feature-gift.svg");
     background-position: left center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding: 53px $tablet-padding 80px;
+  }
+
+  .advantages__title {
+    margin-bottom: 20px;
+    margin-left: -4px;
+  }
+
+  .advantages__list {
+    // margin: 0 $tablet-padding;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-top: -30px;
+  }
+
+  .advantages__item {
+    width: $tablet-column;
+    padding-top: 112px;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before {
+      top: 45px;
+    }
+
+    &--eco {
+      order: 1;
+    }
+
+    &--ikea {
+      order: 3;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--knit {
+      order: 2;
+    }
+
+    &--gagarin {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding: 60px 0 90px;
+  }
+
+  .advantages__title {
+    margin: 0 50px 0 46px;
+    padding-left: $desktop-padding;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .advantages__list {
+    margin: -10px 50px 0;
+    padding-left: $desktop-padding;
+  }
+
+  .advantages__item {
+    width: $desktop-column;
+    padding-top: 111px;
   }
 }

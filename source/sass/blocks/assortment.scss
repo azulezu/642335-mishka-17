@@ -1,5 +1,6 @@
 .assortment {
   margin: 0 auto;
+  // margin-bottom: 30px;
 
   background-color: $light-blanc;
 }
@@ -13,31 +14,35 @@
 }
 
 .assortment__title {
-  font-size: 27px;
+  margin: 0 auto;
+
   text-align: center;
-  white-space: pre-line;
 
   background-color: transparent;
 }
 
 .assortment__list {
-  @include no-list();
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
 }
 
 .assortment__link {
   display: block;
   min-height: 103px;
 
-  color: rgba(white, $chiffon);
+  color: rgba(#ffffff, $chiffon);
 
   &:hover {
     margin-top: -5px;
     padding-bottom: 5px;
-    color: white;
+
+    color: #ffffff;
   }
 
   &:active {
-    color: change-color(white, $alpha: $tulle);
+    color: change-color(#ffffff, $alpha: $tulle);
   }
 
   &--decor {
@@ -66,14 +71,74 @@
 }
 
 .assortment__category {
-  margin: 0 auto;
   display: block;
   width: $mobile-width;
-
-  padding: 25px 112px $mobile-padding 30px;
+  margin: 0 auto;
+  padding: 25px 112px 30px $mobile-padding;
 
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   font-family: $default-font;
+}
+
+@media (max-width: $tablet-width) {
+  .assortment__title {
+    font-size: 27px;
+    white-space: pre-line;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .assortment {
+    margin-bottom: 34px;
+  }
+
+  .assortment__title {
+    max-width: 668px;
+  }
+
+  .assortment__banner {
+    min-height: 569px;
+    padding-top: 97px;
+
+    background: url("../img/hero-tablet@1x.jpg") center -58px no-repeat;
+    background-size: 1150px auto;
+  }
+
+  .assortment__list {
+    display: flex;
+    width: $tablet-width;
+    padding: 0 $tablet-padding;
+  }
+
+  .assortment__item {
+    flex-grow: 1;
+  }
+
+  .assortment__category {
+    margin: 0;
+    padding: 29px 112px 30px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .assortment {
+    margin-bottom: 55px;
+  }
+
+  .assortment__banner {
+    min-height: 567px;
+    padding-top: 94px;
+
+    background-position: center -60px;
+  }
+
+  .assortment__list {
+    width: $desktop-width;
+    padding: 0 50px;
+  }
 }

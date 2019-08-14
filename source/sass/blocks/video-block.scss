@@ -17,7 +17,7 @@
   margin: 0 0 18px;
   padding: 0;
 
-  background-color: rgba(pink, 0.3);
+  background-color: rgba(grey, $tulle);
 }
 
 .video-block__control {
@@ -52,8 +52,6 @@
     width: 668px;
     height: 455px;
     margin-bottom: 0;
-
-    background-color: rgba(pink, 0.3);
   }
 
   .video-block__title {
@@ -90,8 +88,6 @@
     width: 682px;
     height: 455px;
     margin-right: 78px;
-
-    background-color: rgba(pink, 0.3);
   }
 
   .video-block__title {

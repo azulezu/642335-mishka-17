@@ -1,5 +1,5 @@
 .map {
-  min-width: 320px;
+  min-width: $mobile-width;
 }
 
 .map__wrapper {
@@ -12,6 +12,7 @@
 .map__iframe {
   width: 100%;
   height: 100%;
+
   border: none;
 }
 
@@ -23,10 +24,28 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/icon-map-pin.svg");
-    width: 66px;
-    height: 100px;
     top: 145px;
     left: 140px;
+
+    width: 66px;
+    height: 100px;
+
+    background-image: url("../img/icon-map-pin.svg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    min-width: $desktop-column;
+  }
+
+  .map__img {
+    left: calc(50% - 386px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__img {
+    left: calc(50% - 262px);
   }
 }
