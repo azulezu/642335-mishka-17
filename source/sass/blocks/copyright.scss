@@ -5,7 +5,7 @@
 }
 
 .copyright__text {
-  margin-right: 30px;
+  margin: 0 20px 0 0;
 
   font-weight: bold;
   font-size: 19px;
@@ -13,6 +13,15 @@
   color: $big-text-color;
 }
 
+.copyright__link {
+  width: 40px;
+}
+
 .copyright__logo-image {
   display: block;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  //
 }

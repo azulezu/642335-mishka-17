@@ -1,0 +1,31 @@
+@mixin button($border-color, $color: $border-color, $bkg: #ffffff) {
+  display: block;
+  width: 100%;
+  padding: 14px;
+
+  text-align: center;
+  color: $color;
+  text-transform: uppercase;
+
+  background: $bkg;
+  border: 2px solid $border-color;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+
+    background-color: $border-color;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(#ffffff, $tulle);
+
+    background-color: $border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 38px;
+  }
+}

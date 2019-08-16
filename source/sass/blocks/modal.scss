@@ -4,6 +4,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
@@ -12,11 +13,10 @@
   height: 100vh;
 
   background-color: rgba(255, 255, 255, 0.9);
-  // z-index: 2;
 }
 
 .modal__content {
-  background-color: white;
+  background-color: #ffffff;
   border-top: $pearl;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 

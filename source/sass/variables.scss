@@ -21,35 +21,17 @@ $charcoal:       #444444;
 $dark-charcoal:  #010000;
 
 // DIMENSIONS
+
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1150px;
 $mobile-padding: 30px;
+$tablet-padding: 50px;
+$desktop-padding: 175px;
+$tablet-column: 334px;
+$desktop-column: 350px;
 
 // TEXTS
 $default-font: "Open Sans", "Helvetica", sans-serif;
 $text-color: $charcoal;
-$big-text-color: black;
-
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  font-family: "Open Sans";
-  src: local("Open Sans Regular"),
-    local("OpenSans Regular"),
-    local("OpenSans"),
-    url("../fonts/opensans.woff2") format("woff2"),
-    url("../fonts/opensans.woff") format("woff");
-  font-display: fallback;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: bold;
-  font-family: "Open Sans";
-  src: local("Open Sans Bold"),
-    local("OpenSans Bold"),
-    url("../fonts/opensansbold.woff2") format("woff2"),
-    url("../fonts/opensansbold.woff") format("woff");
-  font-display: fallback;
-}
+$big-text-color: #000000;

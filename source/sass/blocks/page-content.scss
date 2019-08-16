@@ -1,0 +1,90 @@
+.page-content {
+  // margin-bottom: 40px;
+}
+
+.page-content__title {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: $default-font;
+  color: $big-text-color;
+}
+
+.page-content__title--main {
+  margin: 0;
+
+  text-align: center;
+  color: $big-text-color;
+
+  background-color: $blanc;
+}
+
+.page-content__curly-divider {
+  display: block;
+  height: 6px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: auto 100%;
+}
+
+.page-content__zigzag-divider {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-content {
+    margin-bottom: 65px;
+  }
+
+  .page-content--main {
+    margin-bottom: 0;
+  }
+
+  .page-content__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-content__curly-divider {
+    height: 15px;
+  }
+
+  .page-content__zigzag-divider {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    height: 23px;
+    margin-top: -12px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: auto 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-content {
+    margin-bottom: 103px;
+  }
+
+  .page-content--main {
+    margin-bottom: 50px;
+  }
+
+  .page-content__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-content__curly-divider {
+    height: 23px;
+    margin: 0 50px;
+  }
+
+  .page-content__zigzag-divider {
+    height: 34px;
+    margin-top: -18px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}

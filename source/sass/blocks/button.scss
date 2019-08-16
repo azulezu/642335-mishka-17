@@ -1,8 +1,12 @@
 .button {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   font-family: $default-font;
 
   @include button($charcoal);
+}
+
+@media (min-width: $tablet-width) {
+  font-size: 17px;
 }

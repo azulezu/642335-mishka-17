@@ -1,0 +1,160 @@
+.product {
+  position: relative;
+}
+
+.product__img {
+  margin-bottom: 22px;
+
+  background-color: $dark-pearl;
+}
+
+.product__name {
+  margin-left: 26px;
+  padding: 0;
+}
+
+.product__details {
+  margin: 0;
+  padding: 6px 28px 16px;
+}
+
+.product__property {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 0;
+  line-height: 24px;
+
+  &--divider-comma {
+    &::after {
+      content: ", ";
+
+      font-size: 13px;
+    }
+  }
+}
+
+.product__property-name,
+.product__property-value {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  font-size: 13px;
+}
+
+.product__property-value {
+  padding-left: 0.25em;
+}
+
+.product__price {
+  position: relative;
+
+  margin: 0;
+  padding: 22px 0 27px 28px;
+
+  font-weight: bold;
+  // font-size: 15px;
+  // line-height: 24px;
+  color: $big-text-color;
+
+  border-top: 1px solid $pearl;
+}
+
+.product__add {
+  content: "";
+  position: absolute;
+  right: 28px;
+  bottom: 30px;
+  // display: block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+
+  background: url("../img/icon-cart.svg") center no-repeat;
+  border: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 668px;
+    height: 334px;
+  }
+
+  .product__img {
+    flex-shrink: 0;
+    width: $tablet-column;
+    height: $tablet-column;
+    margin: 0 28px 0 0;
+  }
+
+  .product__name {
+    width: 276px;
+    margin: 25px 0 5px;
+  }
+
+  .product__details {
+    // margin: 0;
+    padding: 0;
+  }
+
+  .product__property {
+    line-height: 30px;
+  }
+
+  .product__property-name,
+  .product__property-value {
+    font-size: 15px;
+  }
+
+  .product__price {
+    margin: auto 0 0;
+    padding: 24px 0;
+
+    font-size: 17px;
+  }
+
+  .product__add {
+    right: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 316px;
+    height: 660px;
+  }
+
+  .product__img {
+    width: 316px;
+    height: 462px;
+    margin: 0;
+  }
+
+  .product__name {
+    width: 260px;
+    margin: 25px 0 5px 28px;
+  }
+
+  .product__details {
+    margin-left: 28px;
+  }
+
+  .product__price {
+    margin-left: 28px;
+  }
+}
