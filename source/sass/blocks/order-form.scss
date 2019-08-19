@@ -36,12 +36,32 @@
   padding: 20px 20px 20px 60px;
 
   @include radio(40px, $charcoal, $fade-turquoise);
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $dull-turquoise;
+  }
+
+  &:active::before,
+  &:active::after {
+    border-color: rgba($charcoal, $tulle);
+    opacity: $tulle;
+  }
 }
 
 .order-form__label--checkbox {
   padding: 20px 20px 20px 60px;
 
   @include checkbox(40px, $charcoal);
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $dull-turquoise;
+  }
+
+  &:active::before {
+    border-color: rgba($charcoal, $tulle);
+  }
 }
 
 .order-form__piece > input:checked + .order-form__label--radio::after,
@@ -55,10 +75,22 @@
   margin-bottom: 30px;
 
   font: inherit;
+  font-size: 19px;
+  line-height: 18px;
+  color: $charcoal;
 
   border: none;
   border-bottom: 2px solid #000000;
   outline: none;
+
+  &::placeholder {
+    color: rgba($charcoal, $tulle);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $dull-turquoise;
+  }
 }
 
 .order-form__wishes {
@@ -67,10 +99,24 @@
   margin: 20px 0;
   padding: 20px;
 
+  font: inherit;
+  font-size: 19px;
+  line-height: 18px;
+  color: $charcoal;
+
   border: 2px solid $charcoal;
   outline: none;
 
   resize: none;
+
+  &::placeholder {
+    color: rgba($charcoal, $tulle);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $dull-turquoise;
+  }
 }
 
 .order-form__notation {
