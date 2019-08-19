@@ -36,7 +36,7 @@
 
 .video-block__order-button {
   width: auto;
-  margin: 0 35px;
+  margin: 0 33px;
 }
 
 @media (min-width: $tablet-width) {
@@ -77,20 +77,21 @@
 
 @media (min-width: $desktop-width) {
   .video-block {
-    flex-wrap: wrap;
-    align-content: flex-start;
-    height: 455px;
+    display: block;
+    min-height: 455px;
   }
 
   .video-block__frame {
-    // padding: 0;
-    order: 1;
+    float: left;
     width: 682px;
     height: 455px;
-    margin-right: 78px;
   }
 
   .video-block__title {
+    position: relative;
+    left: -50px;
+
+    float: right;
     width: 230px;
     margin-bottom: 32px;
     padding: 95px 0 0;
@@ -99,8 +100,10 @@
   }
 
   .video-block__line {
+    clear: right;
     width: 230px;
     margin: 0 0 50px;
+    margin-left: 760px;
 
     line-height: 30px;
   }
@@ -108,5 +111,6 @@
   .video-block__order-button {
     width: 230px;
     margin: 0;
+    margin-left: 760px;
   }
 }
