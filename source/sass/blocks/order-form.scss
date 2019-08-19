@@ -2,3 +2,78 @@
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
 }
+
+.order-form__section {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  border: none;
+  border-top: 1px solid $dull-turquoise;
+}
+
+.order-form__section > legend {
+  padding-right: 25px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: $fade-turquoise;
+  text-transform: uppercase;
+}
+
+.order-form__label {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.order-form__section--fio .order-form__label {
+  margin-bottom: 17px;
+}
+
+.order-form__label--radio {
+  padding: 20px 20px 20px 60px;
+
+  @include radio(40px, $charcoal, $fade-turquoise);
+}
+
+.order-form__label--checkbox {
+  padding: 20px 20px 20px 60px;
+
+  @include checkbox(40px, $charcoal);
+}
+
+.order-form__piece > input:checked + .order-form__label--radio::after,
+.order-form__piece > input:checked + .order-form__label--checkbox::after {
+  content: "";
+}
+
+.order-form__input-text {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 30px;
+
+  font: inherit;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+  outline: none;
+}
+
+.order-form__wishes {
+  width: 100%;
+  height: 140px;
+  margin: 20px 0;
+  padding: 20px;
+
+  border: 2px solid $charcoal;
+  outline: none;
+
+  resize: none;
+}
+
+.order-form__notation {
+  font-size: 14px;
+  line-height: 16px;
+}
