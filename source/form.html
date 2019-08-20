@@ -46,14 +46,15 @@
   </header>
 
   <main class="page-content order">
-    <h1 class="page-content__title--main order__title">Вязание на заказ</h1>
+    <h1 class="order__title page-content__title  page-content__title--main">Вязание на заказ</h1>
     <p class="page-content__line order__line wrapper">
       Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
     </p>
     <h2 class="visually-hidden">Форма заказа</h2>
-    <form class="order-form wrapper" action="http://echo.htmlacademy.ru" method="post">
+    <form class="order-form" action="http://echo.htmlacademy.ru" method="post">
 
-      <div class="order-form__section">
+    <div class="order__section">
+      <div class="order-form__fieldset order-form__fieldset--type">
         <h3 class="order-form__legend">Тип</h3>
         <div class="order-form__inner-wrap">
           <p class="order-form__piece">
@@ -66,8 +67,10 @@
           </p>
         </div>
       </div>
+    </div>
 
-      <div class="order-form__section order-form__section--colors">
+    <div class="order__section">
+      <div class="order-form__fieldset order-form__fieldset--colors">
         <h3 class="order-form__legend">Цвет</h3>
         <div class="order-form__inner-wrap">
           <p class="order-form__piece">
@@ -96,8 +99,10 @@
           </p>
         </div>
       </div>
+    </div>
 
-      <div class="order-form__section order-form__section--fio">
+    <div class="order__section">
+      <div class="order-form__fieldset order-form__fieldset--fio">
         <h3 class="order-form__legend">ФИО</h3>
         <div class="order-form__inner-wrap">
           <p class="order-form__piece">
@@ -114,27 +119,30 @@
           </p>
         </div>
       </div>
+    </div>
 
-      <div class="order-form__section">
+    <div class="order__section">
+      <div class="order-form__fieldset">
         <h3 class="order-form__legend">тел</h3>
         <div class="order-form__inner-wrap">
           <input class="order-form__input-text order-form__input-text--tel" id="order-form__tel" type="tel" name="tel" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="(\+7)?\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}">
         </div>
       </div>
 
-      <div class="order-form__section">
+      <div class="order-form__fieldset">
         <h3 class="order-form__legend">e-mail</h3>
         <div class="order-form__inner-wrap">
           <input class="order-form__input-text order-form__input-text--email" id="order-form__email" type="email" name="email" value="" placeholder="Ваш email*">
         </div>
       </div>
+    </div>
 
-      <div class="order-form__section">
+    <div class="order__section">
+      <div class="order-form__fieldset">
         <h3 class="order-form__legend">Доп</h3>
-        <!-- <div class="order-form__inner-wrap"> -->
-          <textarea class="order-form__wishes" id="order-form__wishes" name="wishes" rows="6" cols="24" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        <!-- </div> -->
+        <textarea class="order-form__wishes" id="order-form__wishes" name="wishes" rows="6" cols="24" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </div>
+    </div>
 
       <div class="order-form__inner-wrap order-form__inner-wrap--submit">
         <p class="order-form__notation">*Поля обязательны для заполнения</p>

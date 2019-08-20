@@ -7,3 +7,40 @@
 
   font-size: 13px;
 }
+
+.order__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+@media (max-width: $mobile-only-width) {
+  .order__title {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .order__line {
+    padding: 50px $tablet-padding;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__section {
+    padding: 50px 0;
+  }
+
+  .order__section:nth-of-type(even) {
+    background-color: $blanc;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order__line {
+    padding: 160px 225px 0 225px;
+  }
+}

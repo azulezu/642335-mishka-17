@@ -1,15 +1,11 @@
-.order-form {
-  padding-right: $mobile-padding;
-  padding-left: $mobile-padding;
+.order-form__fieldset {
+  width: $mobile-width;
+  margin: 0;
+  padding: 0 $mobile-padding;
 }
 
-.order-form__section {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-
-  // border: none;
-  // border-top: 1px solid $dull-turquoise;
+.order-form__fieldset + .order-form__fieldset {
+  margin-top: 20px;
 }
 
 .order-form__legend {
@@ -36,14 +32,13 @@
   background-color: $dull-turquoise;
 }
 
-
 .order-form__label {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
 }
 
-.order-form__section--fio .order-form__label {
+.order-form__fieldset--fio .order-form__label {
   margin-bottom: 17px;
 }
 
@@ -86,14 +81,15 @@
 
 .order-form__input-text {
   width: 100%;
-  height: 54px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
 
   font: inherit;
   font-size: 19px;
   line-height: 18px;
   color: $charcoal;
 
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid #000000;
   outline: none;
@@ -134,26 +130,30 @@
   }
 }
 
+.order-form__inner-wrap {
+  &--submit {
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 0 $mobile-padding;
+  }
+}
+
 .order-form__notation {
   font-size: 14px;
   line-height: 16px;
 }
 
 @media (min-width: $tablet-width) {
-  .order-form {
-    padding-right: $tablet-padding;
-    padding-left: $tablet-padding;
-  }
-
-  .order-form__section {
+  .order-form__fieldset {
     display: flex;
     align-items: baseline;
-
-    border: none;
+    width: $tablet-width;
+    padding: 0 $tablet-padding;
   }
 
   .order-form__legend {
     display: block;
+    flex-shrink: 0;
     width: 167px;
   }
 
@@ -161,34 +161,37 @@
     display: none;
   }
 
+  .order-form__label {
+    font-size: 19px;
+  }
+
   .order-form__inner-wrap {
+    flex-grow: 1;
+
     &--submit {
       display: flex;
       justify-content: space-between;
+      width: $tablet-width;
+      padding: 0 $tablet-padding;
     }
   }
 
-  .order-form__section--colors .order-form__inner-wrap {
+  .order-form__fieldset--colors .order-form__inner-wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 500px;
   }
 
-  .order-form__piece {
-    width: 500px;
-  }
-
-  .order-form__section--colors .order-form__piece {
+  .order-form__fieldset--colors .order-form__piece {
     width: 240px;
   }
 
-  .order-form__section--fio .order-form__piece {
+  .order-form__fieldset--fio .order-form__piece {
     display: flex;
     align-items: baseline;
   }
 
-  .order-form__section--fio .order-form__input-text {
+  .order-form__fieldset--fio .order-form__input-text {
     flex-grow: 1;
     margin-left: 24px;
   }
@@ -196,7 +199,7 @@
   .order-form__label--radio {
     padding-left: 80px;
 
-    @include radio(54px, $charcoal, $fade-turquoise);
+    @include radio(52px, $charcoal, $fade-turquoise);
   }
 
   .order-form__label--checkbox {
@@ -207,26 +210,57 @@
   }
 
   .order-form__input-text {
-    &--tel,
-    &--email {
-      width: 500px;
-    }
+    // placeholder padding не работает в edge
+    text-indent: 20px;
 
     &::placeholder {
-      padding-left: 20px;
+      // padding-left: 20px;
     }
-  }
-
-  .order-form__wishes {
-    width: 500px;
   }
 
   .order-form__notation {
     order: 2;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .order-form__submit {
     order: 1;
+    width: 230px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .order-form__fieldset {
+    width: $desktop-width;
+  }
+
+  .order-form__legend {
+    width: 175px;
+    padding-left: 60px;
+  }
+
+  .order-form__inner-wrap {
+    padding-right: $desktop-padding;
+
+    &--submit {
+      width: $desktop-width;
+      padding: 0 225px;
+    }
+  }
+
+  .order-form__fieldset--colors .order-form__inner-wrap {
+    justify-content: flex-start;
+    padding-right: 50.9px;
+  }
+
+  .order-form__wishes {
+    margin-right: $desktop-padding;
+  }
+
+  .order-form__fieldset--colors .order-form__piece {
     width: 260px;
   }
 }
