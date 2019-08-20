@@ -8,12 +8,14 @@
   margin-bottom: 20px;
   padding: 0;
 
-  border: none;
-  border-top: 1px solid $dull-turquoise;
+  // border: none;
+  // border-top: 1px solid $dull-turquoise;
 }
 
-.order-form__section > legend {
-  padding-right: 25px;
+.order-form__legend {
+  display: flex;
+  margin: 0;
+  padding: 0;
 
   font-weight: bold;
   font-size: 17px;
@@ -21,6 +23,19 @@
   color: $fade-turquoise;
   text-transform: uppercase;
 }
+
+.order-form__legend::after {
+  content: "";
+
+  display: block;
+  flex-grow: 1;
+  align-self: center;
+  height: 1px;
+  margin-left: 24px;
+
+  background-color: $dull-turquoise;
+}
+
 
 .order-form__label {
   font-weight: bold;
@@ -122,4 +137,96 @@
 .order-form__notation {
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .order-form {
+    padding-right: $tablet-padding;
+    padding-left: $tablet-padding;
+  }
+
+  .order-form__section {
+    display: flex;
+    align-items: baseline;
+
+    border: none;
+  }
+
+  .order-form__legend {
+    display: block;
+    width: 167px;
+  }
+
+  .order-form__legend::after {
+    display: none;
+  }
+
+  .order-form__inner-wrap {
+    &--submit {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .order-form__section--colors .order-form__inner-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 500px;
+  }
+
+  .order-form__piece {
+    width: 500px;
+  }
+
+  .order-form__section--colors .order-form__piece {
+    width: 240px;
+  }
+
+  .order-form__section--fio .order-form__piece {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .order-form__section--fio .order-form__input-text {
+    flex-grow: 1;
+    margin-left: 24px;
+  }
+
+  .order-form__label--radio {
+    padding-left: 80px;
+
+    @include radio(54px, $charcoal, $fade-turquoise);
+  }
+
+  .order-form__label--checkbox {
+    margin-bottom: 20px;
+    padding-left: 80px;
+
+    @include checkbox(54px, $charcoal);
+  }
+
+  .order-form__input-text {
+    &--tel,
+    &--email {
+      width: 500px;
+    }
+
+    &::placeholder {
+      padding-left: 20px;
+    }
+  }
+
+  .order-form__wishes {
+    width: 500px;
+  }
+
+  .order-form__notation {
+    order: 2;
+  }
+
+  .order-form__submit {
+    order: 1;
+    width: 260px;
+  }
 }
