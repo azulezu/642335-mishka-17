@@ -149,7 +149,7 @@
     position: relative;
 
     display: block;
-    padding: 52px 50px 74px;
+    padding: 52px 0 74px 50px;
   }
 
   .hit__title {
@@ -157,17 +157,18 @@
     justify-content: flex-end;
     align-items: flex-start;
     margin-bottom: 48px;
-  }
-
-  .hit__description {
-    width: 525px;
-    padding: 0 60px 108px $desktop-padding;
+    margin-right: 50px;
   }
 
   .hit__short-desc {
     width: $desktop-padding;
     margin: 0;
     padding: 16px 50px 0 40px;
+  }
+
+  .hit__description {
+    width: 525px;
+    padding: 0 60px 108px $desktop-padding;
   }
 
   .hit__long-desc {
@@ -177,11 +178,11 @@
   .hit__img {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 50px;
     z-index: -1;
 
     width: 525px;
-    height: 635.9px;
+    // height: 635.9px;
   }
 
   .hit__buy {

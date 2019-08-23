@@ -127,20 +127,23 @@
 
 @media (min-width: $desktop-width) {
   .advantages {
-    padding: 60px 0 90px;
+    // padding: 60px 0 90px;
+    width: $desktop-width;
+    margin: 0 auto;
+    padding: 60px 0 90px 50px;
   }
 
   .advantages__title {
-    margin: 0 50px 0 46px;
-    padding-left: $desktop-padding;
+    margin: 0 50px 0 -4px;
+    padding: 0 $desktop-padding;
 
     font-size: 53px;
     line-height: 57px;
   }
 
   .advantages__list {
-    margin: -10px 50px 0;
-    padding-left: $desktop-padding;
+    margin: -10px 50px 0 0;
+    padding: 0 $desktop-padding;
   }
 
   .advantages__item {

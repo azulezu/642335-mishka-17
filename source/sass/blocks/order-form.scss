@@ -1,4 +1,266 @@
-.order-form {
-  padding-right: $mobile-padding;
-  padding-left: $mobile-padding;
+.order-form__fieldset {
+  width: $mobile-width;
+  margin: 0;
+  padding: 0 $mobile-padding;
+}
+
+.order-form__fieldset + .order-form__fieldset {
+  margin-top: 20px;
+}
+
+.order-form__legend {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: $fade-turquoise;
+  text-transform: uppercase;
+}
+
+.order-form__legend::after {
+  content: "";
+
+  display: block;
+  flex-grow: 1;
+  align-self: center;
+  height: 1px;
+  margin-left: 24px;
+
+  background-color: $dull-turquoise;
+}
+
+.order-form__label {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.order-form__fieldset--fio .order-form__label {
+  margin-bottom: 17px;
+}
+
+.order-form__label--radio {
+  padding: 20px 20px 20px 60px;
+
+  @include radio(40px, $charcoal, $fade-turquoise);
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $dull-turquoise;
+  }
+
+  &:active::before,
+  &:active::after {
+    border-color: rgba($charcoal, $tulle);
+    opacity: $tulle;
+  }
+}
+
+.order-form__label--checkbox {
+  padding: 20px 20px 20px 60px;
+
+  @include checkbox(40px, $charcoal);
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $dull-turquoise;
+  }
+
+  &:active::before {
+    border-color: rgba($charcoal, $tulle);
+  }
+}
+
+.order-form__piece > input:checked + .order-form__label--radio::after,
+.order-form__piece > input:checked + .order-form__label--checkbox::after {
+  content: "";
+}
+
+.order-form__input-text {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+
+  font: inherit;
+  font-size: 19px;
+  line-height: 18px;
+  color: $charcoal;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000000;
+  outline: none;
+
+  &::placeholder {
+    color: rgba($charcoal, $tulle);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $dull-turquoise;
+  }
+}
+
+.order-form__wishes {
+  width: 100%;
+  height: 140px;
+  margin: 20px 0;
+  padding: 20px;
+
+  font: inherit;
+  font-size: 19px;
+  line-height: 18px;
+  color: $charcoal;
+
+  border: 2px solid $charcoal;
+  outline: none;
+
+  resize: none;
+
+  &::placeholder {
+    color: rgba($charcoal, $tulle);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $dull-turquoise;
+  }
+}
+
+.order-form__inner-wrap {
+  &--submit {
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 0 $mobile-padding;
+  }
+}
+
+.order-form__notation {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .order-form__fieldset {
+    display: flex;
+    align-items: baseline;
+    width: $tablet-width;
+    padding: 0 $tablet-padding;
+  }
+
+  .order-form__legend {
+    display: block;
+    flex-shrink: 0;
+    width: 167px;
+  }
+
+  .order-form__legend::after {
+    display: none;
+  }
+
+  .order-form__label {
+    font-size: 19px;
+  }
+
+  .order-form__inner-wrap {
+    flex-grow: 1;
+
+    &--submit {
+      display: flex;
+      justify-content: space-between;
+      width: $tablet-width;
+      padding: 0 $tablet-padding;
+    }
+  }
+
+  .order-form__fieldset--colors .order-form__inner-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .order-form__fieldset--colors .order-form__piece {
+    width: 240px;
+  }
+
+  .order-form__fieldset--fio .order-form__piece {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .order-form__fieldset--fio .order-form__input-text {
+    flex-grow: 1;
+    margin-left: 24px;
+  }
+
+  .order-form__label--radio {
+    padding-left: 80px;
+
+    @include radio(52px, $charcoal, $fade-turquoise);
+  }
+
+  .order-form__label--checkbox {
+    margin-bottom: 20px;
+    padding-left: 80px;
+
+    @include checkbox(54px, $charcoal);
+  }
+
+  .order-form__input-text {
+    // placeholder padding не работает в edge
+    text-indent: 20px;
+
+    &::placeholder {
+      // padding-left: 20px;
+    }
+  }
+
+  .order-form__notation {
+    order: 2;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__submit {
+    order: 1;
+    width: 230px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .order-form__fieldset {
+    width: $desktop-width;
+  }
+
+  .order-form__legend {
+    width: 175px;
+    padding-left: 60px;
+  }
+
+  .order-form__inner-wrap {
+    padding-right: $desktop-padding;
+
+    &--submit {
+      width: $desktop-width;
+      padding: 0 225px;
+    }
+  }
+
+  .order-form__fieldset--colors .order-form__inner-wrap {
+    justify-content: flex-start;
+    padding-right: 50.9px;
+  }
+
+  .order-form__wishes {
+    margin-right: $desktop-padding;
+  }
+
+  .order-form__fieldset--colors .order-form__piece {
+    width: 260px;
+  }
 }

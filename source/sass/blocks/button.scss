@@ -8,5 +8,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  font-size: 17px;
+  .button {
+    font-size: 17px;
+  }
 }

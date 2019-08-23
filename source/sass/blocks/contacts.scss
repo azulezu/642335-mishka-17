@@ -3,16 +3,18 @@
   padding-bottom: 40px;
 }
 
-.contacts__title {
+.contacts__wrapper {
   width: $mobile-width;
-  margin: 0 auto 25px;
+  margin: 0 auto;
   padding: 0 $mobile-padding;
 }
 
+.contacts__title {
+  margin: 0 0 25px;
+}
+
 .contacts__info {
-  width: $mobile-width;
-  margin: 0 auto 40px;
-  padding: 0 $mobile-padding;
+  margin: 0 0 40px;
 }
 
 .contacts__item {
@@ -70,7 +72,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $mobile-only-width) {
   .contacts__title {
     font-size: 18px;
   }
@@ -88,20 +90,20 @@
   }
 
   .contacts__wrapper {
+    width: $tablet-width;
     margin: 0 auto;
+    padding: 0 $tablet-padding;
   }
 
   .contacts__title {
-    width: $tablet-width;
-    margin: 0 0 50px -4px;
-    padding: 0 100px 0 $tablet-padding;
+    margin-bottom: 50px;
+    margin-left: -4px;
+    padding-right: 100px;
   }
 
   .contacts__info {
     display: flex;
-    width: $tablet-width;
     margin-bottom: 54px;
-    padding: 0 $tablet-padding;
   }
 
   .contacts__item {
@@ -136,34 +138,30 @@
     flex-direction: row;
     max-width: $desktop-width;
     margin: 0 auto;
-    // height: 475px;
+    padding: 68px 0 55px 50px;
   }
 
   .contacts__wrapper {
     order: 1;
+    width: 525px;
     margin: 0;
     padding: 0;
+    padding-left: $desktop-padding;
   }
 
   .contacts__title {
-    width: 525px;
-    margin: 0;
-    margin-left: 45px;
-    padding: 75px 50px 50px $desktop-padding;
+    margin-bottom: 0;
+    padding: 70px 50px 50px 0;
   }
 
   .contacts__info {
     display: block;
-    width: 525px;
-    margin: 0;
-    margin-left: 50px;
-    padding: 0 30px 0 $desktop-padding;
+    padding-right: 30px;
   }
 
   .contacts__item {
     width: auto;
-    margin: 0;
-    margin-bottom: 30px;
+    margin: 0 0 30px;
     padding: 0;
   }
 
@@ -171,14 +169,11 @@
     margin-bottom: 0;
   }
 
-
   .contacts__term {
     width: 78px;
-    // font-size: 17px;
   }
 
   .contacts__data {
-    // font-size: 17px;
     width: auto;
   }
 
@@ -196,9 +191,6 @@
   .contacts__write-us {
     order: 3;
     width: auto;
-    // position: absolute;
-    margin: 0;
-    margin-top: -52px;
-    margin-left: 225px;
+    margin: -52px 0 0 175px;
   }
 }
