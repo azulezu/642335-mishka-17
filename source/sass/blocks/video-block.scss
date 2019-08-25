@@ -6,26 +6,9 @@
 }
 
 .video-block__title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 24px 20px;
+  padding: 25px 0 25px 90px;
 
-  // background: url("../img/icon-video.svg") 30px center no-repeat;
-
-  &::before {
-    content: "";
-
-    display: block;
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    margin-top: 5px;
-    margin-right: 24px;
-    margin-left: 13px;
-
-    background: url("../img/icon-video.svg") center no-repeat;
-  }
+  background: url("../img/icon-video.svg") 30px center no-repeat;
 }
 
 .video-block__frame {
@@ -61,30 +44,26 @@
     display: flex;
     flex-direction: column;
     margin: 0 $tablet-padding;
-    padding: 0 0 45px;
+    padding: 0 40px 45px;
   }
 
   .video-block__frame {
     order: 1;
-    width: 668px;
+    width: auto;
     height: 455px;
-    margin-bottom: 0;
+    margin: 0 -40px;
   }
 
   .video-block__title {
     order: 2;
-    padding: 50px 40px 30px 26px;
+    padding: 37px 0 32px 65px;
 
-    // background: url("../img/icon-video.svg") 40px center no-repeat;
-
-    &::before {
-      margin: -5px 33px 0 13px;
-    }
+    background-position: 0 center;
   }
 
   .video-block__line {
     order: 3;
-    margin: 0 40px 35px;
+    margin: 0 0 35px;
 
     font-size: 15px;
     line-height: 30px;
@@ -92,51 +71,44 @@
 
   .video-block__order-button {
     order: 4;
-    margin: 0 40px;
+    margin: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .video-block {
+    position: relative;
+
     display: block;
     min-height: 455px;
+    padding: 0 55px 0 762px;
   }
 
   .video-block__frame {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     width: 682px;
     height: 455px;
   }
 
   .video-block__title {
     position: relative;
-    left: -58px;
 
-    flex-direction: column;
-    float: right;
-    width: 230px;
     margin-bottom: 32px;
-    padding: 40px 0 0;
+    padding: 95px 0 0;
 
-    // background: url("../img/icon-video.svg") 0 40px no-repeat;
-
-    &::before {
-      margin: 0 0 22px 2px;
-    }
+    background-position: 0 40px;
   }
 
   .video-block__line {
-    clear: right;
-    width: 230px;
     margin: 0 0 50px;
-    margin-left: 760px;
 
     line-height: 30px;
   }
 
   .video-block__order-button {
-    width: 230px;
     margin: 0;
-    margin-left: 760px;
   }
 }
