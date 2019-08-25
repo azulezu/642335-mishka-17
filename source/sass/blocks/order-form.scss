@@ -74,9 +74,9 @@
   }
 }
 
-.order-form__piece > input:checked + .order-form__label--radio::after,
-.order-form__piece > input:checked + .order-form__label--checkbox::after {
-  content: "";
+.order-form__piece > input:not(:checked) + .order-form__label--radio::before,
+.order-form__piece > input:not(:checked) + .order-form__label--checkbox::before {
+  background: none;
 }
 
 .order-form__input-text {
