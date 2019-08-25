@@ -6,8 +6,8 @@
 }
 
 .assortment__banner {
-  min-height: 282px;
-  padding-top: 70px;
+  min-height: 283px;
+  padding-top: 71px;
 
   background: url("../img/hero-mobile@1x.jpg") center -18px no-repeat;
   background-size: 575px auto;
@@ -30,6 +30,7 @@
 
 .assortment__link {
   display: block;
+  position: relative;
   min-height: 103px;
 
   color: rgba(#ffffff, $chiffon);
@@ -45,6 +46,25 @@
     color: change-color(#ffffff, $alpha: $tulle);
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 20px;
+    left: calc(50% + 70px);
+    background: center center no-repeat;
+    opacity: $chiffon;
+  }
+
+  &:hover::after {
+    opacity: $muslin;
+  }
+
+  &:active::after {
+    opacity: $tulle;
+  }
+
   &--decor {
     background-color: $fade-turquoise;
 
@@ -54,6 +74,10 @@
 
     &:active {
       background-color: $turquoise;
+    }
+
+    &::after {
+      background-image: url("../img/icon-interior.svg");
     }
   }
 
@@ -67,8 +91,13 @@
     &:active {
       background-color: $teal;
     }
+
+    &::after {
+      background-image: url("../img/icon-toy.svg");
+    }
   }
 }
+
 
 .assortment__category {
   display: block;
@@ -114,6 +143,14 @@
 
   .assortment__item {
     flex-grow: 1;
+  }
+
+  .assortment__link {
+    &::after {
+      top: 30px;
+      left: auto;
+      right: 30px;
+    }
   }
 
   .assortment__category {

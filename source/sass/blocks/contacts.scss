@@ -80,6 +80,8 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -87,6 +89,18 @@
     align-items: flex-start;
     padding-top: 63px;
     padding-bottom: 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      right: 62px;
+
+      width: 47px;
+      height: 82px;
+
+      background: url("../img/icon-flag.svg") 0 0 no-repeat;
+    }
   }
 
   .contacts__wrapper {
@@ -139,6 +153,12 @@
     max-width: $desktop-width;
     margin: 0 auto;
     padding: 68px 0 55px 50px;
+
+    &::after {
+      top: 130px;
+      right: auto;
+      left: 114px;
+    }
   }
 
   .contacts__wrapper {

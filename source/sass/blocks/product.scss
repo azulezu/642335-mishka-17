@@ -1,5 +1,6 @@
 .product {
   position: relative;
+
   border: 1px solid $light-pearl;
 }
 
@@ -11,6 +12,14 @@
 
 .product__info {
   padding: 0 28px;
+}
+
+.product:hover .product__info {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, $gauze);
+}
+
+.product:active .product__info {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, $gauze);
 }
 
 .product__details {
@@ -44,6 +53,14 @@
   font-size: 13px;
 }
 
+.product:hover .product__name {
+  opacity: $batiste;
+}
+
+.product:active .product__name {
+  opacity: $tulle;
+}
+
 .product__property-value {
   padding-left: 0.25em;
 }
@@ -74,13 +91,29 @@
   margin: 0;
   padding: 0;
 
-  background: url("../img/icon-cart.svg") center no-repeat;
+  // background: url("../img/icon-cart.svg") center no-repeat;
   border: none;
 
   &:active,
   &:focus {
     outline: none;
   }
+}
+
+.product:hover .product__add-icon {
+  opacity: 1;
+}
+
+.product__add-icon {
+  opacity: 0.2;
+}
+
+.product:hover .product__add-icon > path {
+  fill: $fade-turquoise;
+}
+
+.product:active .product__add-icon {
+  opacity: $tulle;
 }
 
 @media (min-width: $tablet-width) {
@@ -91,6 +124,7 @@
     align-content: flex-start;
     width: 668px;
     // height: 334px;
+
     border: none;
   }
 
@@ -104,9 +138,18 @@
 
   .product__info {
     display: flex;
-    width: $tablet-column;
     flex-direction: column;
+    width: $tablet-column;
+
     border: 1px solid $light-pearl;
+  }
+
+  .product:hover > .product__info {
+    box-shadow: 6px 0 10px rgba(0, 0, 0, $gauze);
+  }
+
+  .product:active > .product__info {
+    box-shadow: 3px 0 5px rgba(0, 0, 0, $gauze);
   }
 
   .product__name {
@@ -162,10 +205,18 @@
 
   .product__info {
     display: flex;
-    width: 316px;
-    flex-direction: column;
     flex-grow: 1;
+    flex-direction: column;
+    width: 316px;
     // border: 1px solid $light-pearl;
+  }
+
+  .product:hover > .product__info {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, $gauze);
+  }
+
+  .product:active > .product__info {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, $gauze);
   }
 
   .product__name {

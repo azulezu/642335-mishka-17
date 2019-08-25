@@ -19,21 +19,29 @@
   display: block;
   width: 28px;
   height: 28px;
+  //
+  // background-repeat: no-repeat;
+  // background-position: center;
 
-  background-repeat: no-repeat;
-  background-position: center;
+  // &--in {
+  //   background-image: url("../img/icon-insta.svg");
+  // }
+  //
+  // &--fb {
+  //   background-image: url("../img/icon-fb.svg");
+  // }
+  //
+  // &--tw {
+  //   background-image: url("../img/icon-twitter.svg");
+  // }
 
-  &--in {
-    background-image: url("../img/icon-insta.svg");
+  &:active {
+    opacity: $tulle;
   }
+}
 
-  &--fb {
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--tw {
-    background-image: url("../img/icon-twitter.svg");
-  }
+.socials__link:hover .socials__icon > path {
+  fill: $teal;
 }
 
 @media (max-width: $mobile-only-width) {

@@ -1,4 +1,14 @@
+.logo--header {
+  margin: 20px;
+  margin-top: 22px;
+  margin-bottom: 16px;
+}
+
 @media (min-width: $tablet-width) {
+  .logo--header {
+    margin: 0;
+  }
+
   .page-header {
     background-image: linear-gradient(#ffffff 88px, $light-pearl 88px, $light-pearl 89px, $blanc 89px);
   }
