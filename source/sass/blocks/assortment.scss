@@ -111,7 +111,7 @@
   font-family: $default-font;
 }
 
-@media (max-width: $mobile-only-width) {
+@media (max-width: $mobile-width-only) {
   .assortment__title {
     font-size: 27px;
     white-space: pre-line;

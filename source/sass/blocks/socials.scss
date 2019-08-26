@@ -44,7 +44,7 @@
   fill: $teal;
 }
 
-@media (max-width: $mobile-only-width) {
+@media (max-width: $mobile-width-only) {
   .socials {
     border-bottom: 1px solid $dark-pearl;
   }

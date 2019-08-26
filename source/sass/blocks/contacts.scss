@@ -53,6 +53,15 @@
   word-wrap: break-word;
 
   border-bottom: 1px solid $dull-turquoise;
+
+  &:hover,
+  &:focus {
+    color: $teal;
+  }
+
+  &:active {
+    opacity: $tulle;
+  }
 }
 
 .contacts__location {
@@ -72,7 +81,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: $mobile-only-width) {
+@media (max-width: $mobile-width-only) {
   .contacts__title {
     font-size: 18px;
   }
