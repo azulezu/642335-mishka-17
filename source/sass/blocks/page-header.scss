@@ -1,23 +1,24 @@
-.logo--header {
-  margin: 20px;
-  margin-top: 22px;
-  margin-bottom: 16px;
+.page-header-block {
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
-  .logo--header {
-    margin: 0;
-  }
-
   .page-header {
-    background-image: linear-gradient(#ffffff 88px, $light-pearl 88px, $light-pearl 89px, $blanc 89px);
+    background-image: linear-gradient(#ffffff 89px, $light-pearl 89px, $light-pearl 90px, $blanc 90px);
   }
 
   .page-header--main {
-    background-image: linear-gradient(#ffffff 88px, $light-pearl 88px, $light-pearl 89px, $light-blanc 89px);
+    background-image: linear-gradient(#ffffff 89px, $light-pearl 89px, $light-pearl 90px, $light-blanc 90px);
   }
 
   .page-header-block {
     padding: 0 $tablet-padding;
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header-block {
+    width: $desktop-width;
   }
 }
