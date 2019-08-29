@@ -154,6 +154,16 @@
   }
 }
 
+.order-form__input-text:hover + .order-form__icon,
+.order-form__input-text:focus + .order-form__icon,
+.order-form__input-text:active + .order-form__icon {
+  opacity: 1;
+
+  path {
+    fill: $dull-turquoise;
+  }
+}
+
 .order-form__input-text--tel {
   margin-top: 20px;
   padding-bottom: 10px;
@@ -213,16 +223,6 @@
   height: 24px;
 
   opacity: 0.2;
-
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 1;
-
-    path {
-      fill: $dull-turquoise;
-    }
-  }
 
   &--tel {
     top: 18px;
