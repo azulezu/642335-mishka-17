@@ -6,7 +6,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    // top: 50%;
+    top: 0;
     left: 0;
 
     width: $size;
@@ -17,6 +18,6 @@
     background-clip: content-box;
     border: 2px solid $border-color;
     border-radius: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
   }
 }
