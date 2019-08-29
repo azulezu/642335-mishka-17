@@ -3,11 +3,19 @@
   align-self: center;
 
   &--header {
-    margin: 22px 20px 16px;
+    margin: 22px 20px 16px 18px;
   }
 
   &--footer {
     display: none;
+  }
+
+  &:hover {
+    opacity: $batiste;
+  }
+
+  &:active {
+    opacity: $tulle;
   }
 }
 
@@ -28,7 +36,14 @@
     &--footer {
       display: block;
       margin-right: auto;
+      align-self: auto;
     }
+  }
+
+  .logo--footer .logo-image {
+    width: 102px;
+    height: 34px;
+    display: block;
   }
 
   .logo--header .logo-image {

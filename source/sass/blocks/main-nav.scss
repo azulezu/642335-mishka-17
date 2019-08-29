@@ -9,12 +9,14 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 30px;
+  top: 32px;
   right: calc(50% - 130px);
   z-index: 1;
 
   width: 21px;
   height: 20px;
+
+  padding: 0;
   //  крестик
 
   background: #ffffff url("../img/icon-menu-close.svg") center no-repeat;
@@ -93,6 +95,9 @@
 
 @media (max-width: $mobile-width-only) {
   .main-nav--closed .main-nav__toggle {
+    width: 20px;
+    height: 14px;
+    right: calc(50% - 128px);
     // гамбургер
     background-image: url("../img/icon-menu-open.svg");
   }

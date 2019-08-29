@@ -1,5 +1,5 @@
 .advantages {
-  padding: 28px $mobile-padding 55px;
+  padding: 27px $mobile-padding 53px;
 }
 
 .advantages__title {
@@ -28,8 +28,6 @@
   &::before {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 0;
 
     width: 60px;
     height: 60px;
@@ -40,37 +38,49 @@
   &--eco::before {
     background-image: url("../img/icon-feature-flower.svg");
     background-position: left center;
+    top: 15px;
+    left: 8px;
   }
 
   &--ikea::before {
     background-image: url("../img/icon-feature-money.svg");
     background-position: left center;
+    top: 12px;
+    left: 0;
   }
 
   &--likes::before {
     background-image: url("../img/icon-feature-heart.svg");
     background-position: left center;
+    top: 17px;
+    left: 8px;
   }
 
   &--knit::before {
     background-image: url("../img/icon-feature-ball.svg");
     background-position: left center;
+    top: 17px;
+    left: 3px;
   }
 
   &--gagarin::before {
     background-image: url("../img/icon-feature-rocket.svg");
     background-position: left center;
+    top: 13px;
+    left: -6px;
   }
 
   &--gift::before {
     background-image: url("../img/icon-feature-gift.svg");
     background-position: left center;
+    top: 15px;
+    left: 3px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    padding: 53px $tablet-padding 80px;
+    padding: 50px $tablet-padding 80px;
   }
 
   .advantages__title {
@@ -130,7 +140,7 @@
     // padding: 60px 0 90px;
     width: $desktop-width;
     margin: 0 auto;
-    padding: 60px 0 90px 50px;
+    padding: 60px 0 89px 50px;
   }
 
   .advantages__title {
@@ -148,6 +158,36 @@
 
   .advantages__item {
     width: $desktop-column;
-    padding-top: 111px;
+    padding-top: 112px;
+
+    &--eco::before {
+      top: 47px;
+      left: 9px;
+    }
+
+    &--ikea::before {
+      top: 43px;
+      left: 1px;
+    }
+
+    &--likes::before {
+      top: 47px;
+      left: 8px;
+    }
+
+    &--knit::before {
+      top: 49px;
+      left: 3px;
+    }
+
+    &--gagarin::before {
+      top: 44px;
+      left: -6px;
+    }
+
+    &--gift::before {
+      top: 45px;
+      left: 3px;
+    }
   }
 }

@@ -10,12 +10,13 @@
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
+  margin-left: -2px;
   padding: 0;
 }
 
 .reviews__slider {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 
 .reviews__content {
@@ -122,8 +123,7 @@
 @media (min-width: $desktop-width) {
   .reviews {
     width: $desktop-width;
-    margin: 0 auto 70px;
-    // margin: 0 auto;
+    margin: 0 auto 68px;
 
     background: none;
   }
@@ -144,6 +144,7 @@
     width: $desktop-column;
     margin-top: -10px;
     margin-left: -5px;
+    margin-bottom: 49px;
 
     font-size: 53px;
     line-height: 57px;
@@ -159,6 +160,6 @@
 
   .reviews__text {
     width: 775px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 }

@@ -14,10 +14,7 @@
 }
 
 .assortment__title {
-  margin: 0 auto;
-
-  text-align: center;
-
+  // margin: 0 auto;
   background-color: transparent;
 }
 
@@ -29,17 +26,16 @@
 }
 
 .assortment__link {
-  display: block;
   position: relative;
+
+  display: block;
   min-height: 103px;
 
-  color: rgba(#ffffff, $chiffon);
+  color: #ffffff;
 
   &:hover {
     margin-top: -5px;
     padding-bottom: 5px;
-
-    color: #ffffff;
   }
 
   &:active {
@@ -49,10 +45,7 @@
   &::after {
     content: "";
     position: absolute;
-    width: 65px;
-    height: 65px;
-    top: 20px;
-    left: calc(50% + 70px);
+
     background: center center no-repeat;
     opacity: $chiffon;
   }
@@ -77,6 +70,12 @@
     }
 
     &::after {
+      top: 22px;
+      left: calc(50% + 84px);
+
+      width: 40px;
+      height: 62px;
+
       background-image: url("../img/icon-interior.svg");
     }
   }
@@ -93,11 +92,16 @@
     }
 
     &::after {
+      top: 21px;
+      left: calc(50% + 73px);
+
+      width: 60px;
+      height: 60px;
+
       background-image: url("../img/icon-toy.svg");
     }
   }
 }
-
 
 .assortment__category {
   display: block;
@@ -113,6 +117,8 @@
 
 @media (max-width: $mobile-width-only) {
   .assortment__title {
+    margin-left: -2px;
+
     font-size: 27px;
     white-space: pre-line;
   }
@@ -125,6 +131,7 @@
 
   .assortment__title {
     max-width: 668px;
+    margin: 0 auto;
   }
 
   .assortment__banner {
@@ -147,9 +154,17 @@
 
   .assortment__link {
     &::after {
-      top: 30px;
       left: auto;
-      right: 30px;
+    }
+
+    &--decor::after {
+      top: 30px;
+      right: 36px;
+    }
+
+    &--toys::after {
+      top: 32px;
+      right: 34px;
     }
   }
 
@@ -164,7 +179,7 @@
 
 @media (min-width: $desktop-width) {
   .assortment {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
   }
 
   .assortment__banner {
