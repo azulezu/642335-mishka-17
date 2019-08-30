@@ -7,30 +7,26 @@
   width: $mobile-width;
   margin: 0;
   padding: 0 $mobile-padding;
-}
 
-.order-form__fieldset--type {
-  padding-bottom: 30px;
-}
+  &--type {
+    padding-bottom: 30px;
+  }
 
-.order-form__fieldset--colors {
-  padding-bottom: 31px;
-}
+  &--colors {
+    padding-bottom: 31px;
+  }
 
-.order-form__fieldset--fio {
-  padding-bottom: 12px;
-}
+  &--fio {
+    padding-bottom: 12px;
+  }
 
-.order-form__fieldset--tel {
-  padding-bottom: 13px;
-}
+  &--tel {
+    padding-bottom: 13px;
+  }
 
-.order-form__fieldset--email {
-  padding-bottom: 13px;
-}
-
-.order-form__fieldset + .order-form__fieldset {
-  // margin-top: 20px;
+  &--email {
+    padding-bottom: 13px;
+  }
 }
 
 .order-form__legend {
@@ -43,34 +39,47 @@
   line-height: 16px;
   color: $fade-turquoise;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    display: block;
+    flex-grow: 1;
+    align-self: center;
+    height: 1px;
+    margin-left: 24px;
+
+    background-color: $dull-turquoise;
+  }
+
+  &--type {
+    margin-bottom: 24px;
+  }
+
+  &--colors {
+    margin-bottom: 25px;
+  }
+
+  &--fio {
+    margin-bottom: 26px;
+  }
+
+  &--extra {
+    margin-bottom: 5px;
+  }
 }
 
-.order-form__legend::after {
-  content: "";
-
-  display: block;
-  flex-grow: 1;
-  align-self: center;
-  height: 1px;
-  margin-left: 24px;
-
-  background-color: $dull-turquoise;
+.order-form__inner-wrap {
+  &--submit {
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 0 $mobile-padding;
+  }
 }
 
-.order-form__fieldset--type .order-form__legend {
-  margin-bottom: 24px;
-}
-
-.order-form__fieldset--colors .order-form__legend {
-  margin-bottom: 25px;
-}
-
-.order-form__fieldset--fio .order-form__legend {
-  margin-bottom: 26px;
-}
-
-.order-form__fieldset--extra .order-form__legend {
-  margin-bottom: 5px;
+.order-form__fieldset--email .order-form__inner-wrap,
+.order-form__fieldset--tel .order-form__inner-wrap {
+  position: relative;
 }
 
 .order-form__piece {
@@ -85,10 +94,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-}
 
-.order-form__fieldset--fio .order-form__label {
-  margin-bottom: 17px;
+  &--fio {
+    margin-bottom: 17px;
+  }
 }
 
 .order-form__label--radio {
@@ -96,13 +105,13 @@
 
   @include radio(40px, $charcoal, $fade-turquoise);
 
-  &:hover::before,
-  &:focus::before {
+  &:focus::before,
+  &:hover::before {
     border-color: $dull-turquoise;
   }
 
-  &:active::before,
-  &:active::after {
+  &:active::after,
+  &:active::before {
     border-color: rgba($charcoal, $tulle);
     opacity: $tulle;
   }
@@ -113,8 +122,8 @@
 
   @include checkbox(40px, $charcoal);
 
-  &:hover::before,
-  &:focus::before {
+  &:focus::before,
+  &:hover::before {
     border-color: $dull-turquoise;
   }
 
@@ -123,8 +132,8 @@
   }
 }
 
-.order-form__piece > input:not(:checked) + .order-form__label--radio::before,
-.order-form__piece > input:not(:checked) + .order-form__label--checkbox::before {
+.order-form__piece > input:not(:checked) + .order-form__label--checkbox::before,
+.order-form__piece > input:not(:checked) + .order-form__label--radio::before {
   background: none;
 }
 
@@ -148,32 +157,24 @@
     color: rgba($charcoal, $tulle);
   }
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: $dull-turquoise;
   }
-}
 
-.order-form__input-text:hover + .order-form__icon,
-.order-form__input-text:focus + .order-form__icon,
-.order-form__input-text:active + .order-form__icon {
-  opacity: 1;
+  &--tel {
+    margin-top: 20px;
+    padding-bottom: 10px;
 
-  path {
-    fill: $dull-turquoise;
+    font-size: 19px;
+    z-index:1;
   }
-}
 
-.order-form__input-text--tel {
-  margin-top: 20px;
-  padding-bottom: 10px;
-
-  font-size: 19px;
-}
-
-.order-form__input-text--email {
-  margin-top: 20px;
-  padding-bottom: 18px;
+  &--email {
+    margin-top: 20px;
+    padding-bottom: 18px;
+    z-index: 1;
+  }
 }
 
 .order-form__extra {
@@ -196,23 +197,10 @@
     color: rgba($charcoal, $tulle);
   }
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: $dull-turquoise;
   }
-}
-
-.order-form__inner-wrap {
-  &--submit {
-    width: $mobile-width;
-    margin: 0 auto;
-    padding: 0 $mobile-padding;
-  }
-}
-
-.order-form__fieldset--tel .order-form__inner-wrap,
-.order-form__fieldset--email .order-form__inner-wrap {
-  position: relative;
 }
 
 .order-form__icon {
@@ -238,9 +226,18 @@
   }
 }
 
+.order-form__input-text:active + .order-form__icon,
+.order-form__input-text:focus + .order-form__icon,
+.order-form__input-text:hover + .order-form__icon {
+  opacity: 1;
+
+  path {
+    fill: $dull-turquoise;
+  }
+}
+
 .order-form__notation {
-  margin: 0;
-  margin-bottom: 31px;
+  margin: 0 0 31px;
 
   font-size: 14px;
   line-height: 16px;
@@ -261,49 +258,45 @@
     align-items: baseline;
     width: $tablet-width;
     padding: 0 $tablet-padding;
-  }
 
-  .order-form__fieldset--type {
-    padding-bottom: 50px;
-  }
+    &--type {
+      padding-bottom: 50px;
+    }
 
-  .order-form__fieldset--colors {
-    padding-top: 48px;
-    padding-bottom: 28px;
-  }
+    &--colors {
+      padding-top: 48px;
+      padding-bottom: 28px;
+    }
 
-  .order-form__fieldset--fio {
-    padding-top: 49px;
-    padding-bottom: 27px;
-  }
+    &--fio {
+      padding-top: 49px;
+      padding-bottom: 27px;
+    }
 
-  .order-form__fieldset--tel {
-    padding-top: 41px;
-    padding-bottom: 15px;
-  }
+    &--tel {
+      padding-top: 41px;
+      padding-bottom: 15px;
+    }
 
-  .order-form__fieldset--email {
-    padding-top: 0;
-    padding-bottom: 27px;
-  }
+    &--email {
+      padding-top: 0;
+      padding-bottom: 27px;
+    }
 
-  .order-form__fieldset--extra {
-    padding-top: 30px;
-    padding-bottom: 53px;
+    &--extra {
+      padding-top: 30px;
+      padding-bottom: 53px;
+    }
   }
 
   .order-form__legend {
     display: block;
     flex-shrink: 0;
     width: 166px;
-  }
 
-  .order-form__legend::after {
-    display: none;
-  }
-
-  .order-form__label {
-    font-size: 19px;
+    &::after {
+      display: none;
+    }
   }
 
   .order-form__inner-wrap {
@@ -324,18 +317,6 @@
     justify-content: space-between;
   }
 
-  .order-form__icon {
-    &--tel {
-      top: 20px;
-      right: 28px;
-    }
-
-    &--email {
-      top: 20px;
-      right: 23px;
-    }
-  }
-
   .order-form__fieldset--type .order-form__piece:not(:last-of-type) {
     margin-bottom: 25px;
   }
@@ -350,9 +331,8 @@
     align-items: baseline;
   }
 
-  .order-form__fieldset--fio .order-form__input-text {
-    flex-grow: 1;
-    margin-left: 24px;
+  .order-form__label {
+    font-size: 19px;
   }
 
   .order-form__label--radio {
@@ -375,16 +355,17 @@
     // placeholder padding не работает в edge
     text-indent: 16px;
 
-    &::placeholder {
-      // padding-left: 20px;
+    &--fio {
+      flex-grow: 1;
+      margin-left: 24px;
     }
-  }
 
-  .order-form__input-text--tel {
-    margin-bottom: 0;
-    padding-bottom: 12px;
+    &--tel {
+      margin-bottom: 0;
+      padding-bottom: 12px;
 
-    text-indent: 16px;
+      text-indent: 16px;
+    }
   }
 
   .order-form__extra {
@@ -392,6 +373,18 @@
     margin: 20px 0 0;
 
     font-size: 19px;
+  }
+
+  .order-form__icon {
+    &--tel {
+      top: 20px;
+      right: 28px;
+    }
+
+    &--email {
+      top: 20px;
+      right: 23px;
+    }
   }
 
   .order-form__notation {
@@ -408,7 +401,6 @@
   }
 }
 
-
 @media (min-width: $desktop-width) {
   .order-form {
     margin-top: 54px;
@@ -416,15 +408,14 @@
 
   .order-form__fieldset {
     width: $desktop-width;
-  }
 
+    &--type {
+      padding-bottom: 49px;
+    }
 
-  .order-form__fieldset--type {
-    padding-bottom: 49px;
-  }
-
-  .order-form__fieldset--extra {
-    padding-bottom: 49px;
+    &--extra {
+      padding-bottom: 49px;
+    }
   }
 
   .order-form__legend {
@@ -446,6 +437,14 @@
     padding-right: 50px;
   }
 
+  .order-form__fieldset--colors .order-form__piece {
+    width: 260px;
+  }
+
+  .order-form__extra {
+    margin-right: $desktop-padding;
+  }
+
   .order-form__icon {
     &--tel {
       top: 20px;
@@ -456,13 +455,5 @@
       top: 20px;
       right: 179px;
     }
-  }
-
-  .order-form__extra {
-    margin-right: $desktop-padding;
-  }
-
-  .order-form__fieldset--colors .order-form__piece {
-    width: 260px;
   }
 }

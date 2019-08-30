@@ -67,7 +67,7 @@
 
     <div class="order__section">
       <div class="order-form__fieldset order-form__fieldset--type">
-        <h3 class="order-form__legend">Тип</h3>
+        <h3 class="order-form__legend order-form__legend--type">Тип</h3>
         <div class="order-form__inner-wrap">
           <p class="order-form__piece">
             <input class="visually-hidden" id="radio-decor" type="radio" name="goodsgroup" value="decor" checked>
@@ -83,7 +83,7 @@
 
     <div class="order__section">
       <div class="order-form__fieldset order-form__fieldset--colors">
-        <h3 class="order-form__legend">Цвет</h3>
+        <h3 class="order-form__legend order-form__legend--colors">Цвет</h3>
         <div class="order-form__inner-wrap">
           <p class="order-form__piece">
             <input class="visually-hidden" id="color-1" type="checkbox" name="color" value="Белый" checked>
@@ -115,18 +115,18 @@
 
     <div class="order__section">
       <div class="order-form__fieldset order-form__fieldset--fio">
-        <h3 class="order-form__legend">ФИО</h3>
+        <h3 class="order-form__legend order-form__legend--fio">ФИО</h3>
         <div class="order-form__inner-wrap">
           <p class="order-form__piece">
-            <label class="order-form__label order-form__label--fullname" for="order-form__name">Имя:</label>
+            <label class="order-form__label order-form__label--fio" for="order-form__name">Имя:</label>
             <input class="order-form__input-text" id="order-form__name" type="text" name="name" value="" placeholder="Введите ваше имя*">
           </p>
           <p class="order-form__piece">
-            <label class="order-form__label order-form__label--fullname" for="order-form__surname">Фамилия:</label>
+            <label class="order-form__label order-form__label--fio" for="order-form__surname">Фамилия:</label>
             <input class="order-form__input-text" id="order-form__surname" type="text" name="surname" value="" placeholder="Укажите фамилию*">
           </p>
           <p class="order-form__piece">
-            <label class="order-form__label order-form__label--fullname" for="order-form__patronymic">Отчество:</label>
+            <label class="order-form__label order-form__label--fio" for="order-form__patronymic">Отчество:</label>
             <input class="order-form__input-text" id="order-form__patronymic" type="text" name="patronymic" value="" placeholder="Отчество, если желаете">
           </p>
         </div>
@@ -135,7 +135,7 @@
 
     <div class="order__section">
       <div class="order-form__fieldset order-form__fieldset--tel">
-        <h3 class="order-form__legend">тел</h3>
+        <h3 class="order-form__legend order-form__legend--tel">тел</h3>
         <div class="order-form__inner-wrap">
           <input class="order-form__input-text order-form__input-text--tel" id="order-form__tel" type="tel" name="tel" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="(\+7)?\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}">
           <svg class="order-form__icon order-form__icon--tel" xmlns="http://www.w3.org/2000/svg" width="24.829" height="24.333" x="0" y="0" version="1.1" viewBox="0 0 24.829 24.333" xml:space="preserve">
@@ -146,7 +146,7 @@
       </div>
 
       <div class="order-form__fieldset order-form__fieldset--email">
-        <h3 class="order-form__legend">e-mail</h3>
+        <h3 class="order-form__legend order-form__legend--email">e-mail</h3>
         <div class="order-form__inner-wrap">
           <input class="order-form__input-text order-form__input-text--email" id="order-form__email" type="email" name="email" value="" placeholder="Ваш email*">
           <svg class="order-form__icon order-form__icon--email" xmlns="http://www.w3.org/2000/svg" width="32" height="32" x="0" y="0" version="1.1" viewBox="0 0 32 32" xml:space="preserve">
@@ -158,7 +158,7 @@
 
     <div class="order__section">
       <div class="order-form__fieldset order-form__fieldset--extra">
-        <h3 class="order-form__legend">Доп</h3>
+        <h3 class="order-form__legend  order-form__legend--extra">Доп</h3>
         <textarea class="order-form__extra" id="order-form__extra" name="extra" rows="6" cols="24" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </div>
     </div>
