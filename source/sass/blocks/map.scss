@@ -21,17 +21,17 @@
   top: 0;
   left: calc(50% - 160px);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 145px;
-    left: 140px;
-
-    width: 66px;
-    height: 100px;
-
-    background-image: url("../img/icon-map-pin.svg");
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 145px;
+  //   left: 140px;
+  //
+  //   width: 66px;
+  //   height: 100px;
+  //
+  //   background-image: url("../img/icon-map-pin.svg");
+  // }
 }
 
 @media (min-width: $desktop-width) {
