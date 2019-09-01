@@ -12,21 +12,9 @@
     width: $size;
     height: $size;
 
-    background-color: transparent;
-    border: 2px solid $border-color;
-    transform: translateY(-50%);
-  }
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    width: $size;
-    height: $size;
-
-    background: url("../img/icon-tick.svg") center no-repeat;
+    background: transparent url("../img/icon-tick.svg") center no-repeat;
     background-size: calc(#{$size} * 0.5) calc(#{$size} * 0.5);
+    border: 2px solid $border-color;
     transform: translateY(-50%);
   }
 }

@@ -3,6 +3,7 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  align-items: baseline;
 
   list-style: none;
 }
@@ -19,24 +20,32 @@
   display: block;
   width: 28px;
   height: 28px;
+  //
+  // background-repeat: no-repeat;
+  // background-position: center;
 
-  background-repeat: no-repeat;
-  background-position: center;
+  // &--in {
+  //   background-image: url("../img/icon-insta.svg");
+  // }
+  //
+  // &--fb {
+  //   background-image: url("../img/icon-fb.svg");
+  // }
+  //
+  // &--tw {
+  //   background-image: url("../img/icon-twitter.svg");
+  // }
 
-  &--in {
-    background-image: url("../img/icon-insta.svg");
-  }
-
-  &--fb {
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--tw {
-    background-image: url("../img/icon-twitter.svg");
+  &:active {
+    opacity: $tulle;
   }
 }
 
-@media (max-width: $mobile-only-width) {
+.socials__link:hover .socials__icon > path {
+  fill: $teal;
+}
+
+@media (max-width: $mobile-width-only) {
   .socials {
     border-bottom: 1px solid $dark-pearl;
   }

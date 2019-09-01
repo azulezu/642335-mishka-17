@@ -1,17 +1,23 @@
 .add {
-  padding: 37px $mobile-padding 46px;
+  padding: 30px $mobile-padding 46px;
+  margin: 0 auto;
+  width: $mobile-width;
 }
 
 .add__title {
   text-align: center;
   text-transform: uppercase;
   white-space: pre-line;
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .add__line {
-  margin-bottom: 50px;
+  margin: 0;
+  margin-bottom: 23px;
 
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -20,24 +26,32 @@
   justify-content: space-between;
   margin: auto;
   padding: 0;
-  padding-bottom: 60px;
+  padding-bottom: 31px;
 
   list-style: none;
 }
 
-.add__sizes-button .add__size {
+.add__size {
   display: block;
   width: 82px;
   padding-top: 16px;
   padding-bottom: 16px;
 
   text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
 
-  border: 2px solid $light-pearl;
+  border: 2px solid rgba($charcoal, $gauze);
 
   &:focus,
   &:hover {
-    border: 2px solid $pearl;
+    border-color: rgba($charcoal, $tulle);
+  }
+
+  &:active {
+    border-color: $dull-turquoise;
   }
 }
 
@@ -45,15 +59,9 @@
   border: 2px solid $fade-turquoise;
 }
 
-.add__size {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 16px;
-  text-transform: uppercase;
-}
-
 .add__submit {
   @include button($fade-turquoise, #ffffff, $fade-turquoise);
+  margin: 0 auto;
 
   &:hover {
     margin-top: -5px;
@@ -70,10 +78,30 @@
 
 @media (min-width: $tablet-width) {
   .add {
-    width: 350px;
+    padding: 32px $tablet-padding 46px;
+    width: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   }
 
   .add__title {
     font-size: 30px;
+    line-height: 57px;
+    white-space: normal;
+  }
+
+  .add__line {
+    font-size: 17px;
+  }
+
+  .add__sizes-list {
+    width: 350px;
+  }
+
+  .add__size {
+    width: 112px;
+  }
+
+  .add__submit {
+    width: 350px;
   }
 }

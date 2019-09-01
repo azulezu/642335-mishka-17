@@ -1,6 +1,6 @@
 .contacts {
   padding-top: 36px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 }
 
 .contacts__wrapper {
@@ -10,7 +10,7 @@
 }
 
 .contacts__title {
-  margin: 0 0 25px;
+  margin: 0 0 25px -2px;
 }
 
 .contacts__info {
@@ -53,6 +53,15 @@
   word-wrap: break-word;
 
   border-bottom: 1px solid $dull-turquoise;
+
+  &:hover,
+  &:focus {
+    color: $teal;
+  }
+
+  &:active {
+    opacity: $tulle;
+  }
 }
 
 .contacts__location {
@@ -63,16 +72,12 @@
   margin: 0 0 36px;
 }
 
-.map__iframe {
-  background-color: rgba(0, 255, 255, $chiffon);
-}
-
 .contacts__write-us {
   width: calc(#{$mobile-width} - 2 * #{$mobile-padding});
   margin: 0 auto;
 }
 
-@media (max-width: $mobile-only-width) {
+@media (max-width: $mobile-width-only) {
   .contacts__title {
     font-size: 18px;
   }
@@ -80,13 +85,27 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 63px;
-    padding-bottom: 60px;
+    padding-top: 62px;
+    padding-bottom: 57px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 47px;
+      right: calc(50% - 330px);
+
+      width: 47px;
+      height: 82px;
+
+      background: url("../img/icon-flag.svg") 0 0 no-repeat;
+    }
   }
 
   .contacts__wrapper {
@@ -112,7 +131,7 @@
   }
 
   .contacts__term {
-    width: 80px;
+    width: 76px;
 
     font-size: 17px;
   }
@@ -125,11 +144,11 @@
 
   .contacts__map {
     align-self: stretch;
-    margin-bottom: 54px;
+    margin-bottom: 56px;
   }
 
   .contacts__write-us {
-    width: auto;
+    width: 230px;
   }
 }
 
@@ -138,7 +157,13 @@
     flex-direction: row;
     max-width: $desktop-width;
     margin: 0 auto;
-    padding: 68px 0 55px 50px;
+    padding: 72px 0 55px 50px;
+
+    &::after {
+      top: 134px;
+      right: auto;
+      left: 113px;
+    }
   }
 
   .contacts__wrapper {
@@ -190,7 +215,7 @@
 
   .contacts__write-us {
     order: 3;
-    width: auto;
+    // width: auto;
     margin: -52px 0 0 175px;
   }
 }

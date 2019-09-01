@@ -1,11 +1,11 @@
 .copyright {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 }
 
 .copyright__text {
-  margin: 0 20px 0 0;
+  margin: -5px 30px 0 0;
 
   font-weight: bold;
   font-size: 19px;
@@ -14,14 +14,24 @@
 }
 
 .copyright__link {
-  width: 40px;
+  display: flex;
+  align-items: center;
+
+  &:active {
+    opacity: $tulle;
+  }
 }
 
-.copyright__logo-image {
-  display: block;
-  width: 100%;
+.copyright__logo-image > path {
+  fill: $fade-turquoise;
+}
+
+.copyright__link:hover .copyright__logo-image > path {
+  fill: $teal;
 }
 
 @media (min-width: $tablet-width) {
-  //
+  .copyright__link {
+    margin-top: -3px;
+  }
 }

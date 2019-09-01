@@ -6,30 +6,48 @@
 }
 
 .video-block__title {
-  padding: 25px 0 25px 90px;
+  padding: 22px 0 25px 89px;
 
-  background: url("../img/icon-video.svg") 30px center no-repeat;
+  background: url("../img/icon-video.svg") 33px 28px no-repeat;
+}
+
+.video-block__video {
+  position: relative;
+  margin: 0 0 20px;
 }
 
 .video-block__frame {
   width: 260px;
   height: 150px;
-  margin: 0 0 18px;
-  padding: 0;
 
   background-color: rgba(grey, $tulle);
 }
 
 .video-block__control {
   position: absolute;
-  right: 0;
-  left: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  width: 101px;
+  height: 77px;
+  background: url("../img/icon-play.svg") center no-repeat;
+  border: none;
+  outline: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 
-  display: none;
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    opacity: $tulle;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 .video-block__line {
-  margin: 0 34px 26px;
+  margin: 0 34px 25px;
 
   font-size: 13px;
 }
@@ -43,27 +61,31 @@
   .video-block {
     display: flex;
     flex-direction: column;
-    margin: 0 $tablet-padding;
-    padding: 0 0 45px;
+    margin: 0 $tablet-padding 63px;
+    padding: 0 40px 45px;
+  }
+
+  .video-block__video {
+    order: 1;
+    // width: auto;
+    margin: 0 -40px;
   }
 
   .video-block__frame {
-    order: 1;
-    width: 668px;
+    width: 100%;
     height: 455px;
-    margin-bottom: 0;
   }
 
   .video-block__title {
     order: 2;
-    padding: 37px 40px 32px 105px;
+    padding: 33px 0 32px 65px;
 
-    background: url("../img/icon-video.svg") 40px center no-repeat;
+    background-position: 0 center;
   }
 
   .video-block__line {
     order: 3;
-    margin: 0 40px 35px;
+    margin: 0 0 35px;
 
     font-size: 15px;
     line-height: 30px;
@@ -71,46 +93,48 @@
 
   .video-block__order-button {
     order: 4;
-    margin: 0 40px;
+    margin: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .video-block {
+    position: relative;
+
     display: block;
     min-height: 455px;
+    padding: 0 55px 0 762px;
+    margin-bottom: 105px;
+  }
+
+  .video-block__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
   }
 
   .video-block__frame {
-    float: left;
     width: 682px;
     height: 455px;
   }
 
   .video-block__title {
     position: relative;
-    left: -50px;
 
-    float: right;
-    width: 230px;
     margin-bottom: 32px;
     padding: 95px 0 0;
 
-    background: url("../img/icon-video.svg") 0 40px no-repeat;
+    background-position: 0 40px;
   }
 
   .video-block__line {
-    clear: right;
-    width: 230px;
-    margin: 0 0 50px;
-    margin-left: 760px;
+    margin: 0 0 46px;
 
     line-height: 30px;
   }
 
   .video-block__order-button {
-    width: 230px;
     margin: 0;
-    margin-left: 760px;
   }
 }

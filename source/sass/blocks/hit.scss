@@ -34,7 +34,8 @@
 }
 
 .hit__details {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
+  margin-left: -3px;
 
   font-size: 15px;
   line-height: 20px;
@@ -42,7 +43,6 @@
 
 .hit__property-name,
 .hit__property-value {
-  padding-right: 20px;
   padding-bottom: 15px;
 
   text-align: left;
@@ -50,9 +50,17 @@
   border-bottom: 1px solid $light-pearl;
 }
 
+.hit__property-name {
+  padding-right: 25px;
+}
+
+.hit__property-value {
+  width: 100%;
+}
+
 .hit__price-line {
-  margin-top: 16px;
-  margin-bottom: 25px;
+  margin-top: 18px;
+  margin-bottom: 26px;
 
   font-weight: bold;
   font-size: 17px;
@@ -69,14 +77,14 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 0 $tablet-padding 50px;
+    padding: 0 $tablet-padding 54px;
   }
 
   .hit__title {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 
   .hit__name {
@@ -95,10 +103,11 @@
     width: $tablet-column;
     padding-right: 40px;
     padding-bottom: 103px;
+    margin-top: -6px;
   }
 
   .hit__long-desc {
-    margin-bottom: 33px;
+    margin-bottom: 36px;
 
     font-size: 17px;
     line-height: 30px;
@@ -132,7 +141,7 @@
 
   .hit__buy {
     width: $tablet-column;
-    margin-top: -103px;
+    margin-top: -109px;
     padding-right: 45px;
   }
 
@@ -156,7 +165,7 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-bottom: 48px;
+    margin-bottom: 54px;
     margin-right: 50px;
   }
 
@@ -168,7 +177,7 @@
 
   .hit__description {
     width: 525px;
-    padding: 0 60px 108px $desktop-padding;
+    padding: 0 60px 106px $desktop-padding;
   }
 
   .hit__long-desc {
@@ -192,38 +201,6 @@
   }
 
   .hit__price-line {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
   }
-  // .hit {
-  //   display: flex;
-  //   flex-direction: column;
-  //   flex-wrap: wrap;
-  //   min-height: 625px;
-  // }
-  //
-  // .hit__name {
-  //   width: $desktop-column;
-  // }
-  //
-  // .hit__short-desc {
-  //       left: 0;
-  //       right: auto;
-  // }
-  //
-  // .hit__long-desc {
-  //   max-width: $desktop-column;
-  // }
-  //
-  // .hit__details {
-  //   max-width: $desktop-column;
-  // }
-  //
-  // .hit__img {
-  //   width: 525px;
-  //   padding-top: 50px;
-  // }
-  //
-  // .hit__price-line {
-  //   max-width: $desktop-column;
-  // }
 }

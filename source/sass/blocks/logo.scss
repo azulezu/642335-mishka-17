@@ -2,8 +2,20 @@
   display: block;
   align-self: center;
 
+  &--header {
+    margin: 22px 20px 16px 18px;
+  }
+
   &--footer {
     display: none;
+  }
+
+  &:hover {
+    opacity: $batiste;
+  }
+
+  &:active {
+    opacity: $tulle;
   }
 }
 
@@ -15,13 +27,23 @@
 @media (min-width: $tablet-width) {
   .logo {
     &--header {
+      margin: 0;
+      margin-top: 22px;
+      margin-bottom: 14px;
       order: 1;
     }
 
     &--footer {
       display: block;
       margin-right: auto;
+      align-self: auto;
     }
+  }
+
+  .logo--footer .logo-image {
+    width: 102px;
+    height: auto;
+    display: block;
   }
 
   .logo--header .logo-image {
@@ -33,8 +55,9 @@
 @media (min-width: $desktop-width) {
   .logo--header {
     order: 2;
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 0;
+    margin-left: 40px;
   }
 
   .logo--header .logo-image {

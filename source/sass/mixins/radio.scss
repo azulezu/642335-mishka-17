@@ -6,28 +6,18 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    // top: 50%;
+    top: 0;
     left: 0;
 
     width: $size;
     height: $size;
-
-    background-color: transparent;
-    border: 2px solid $border-color;
-    border-radius: 50%;
-    transform: translateY(-50%);
-  }
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    width: calc(#{$size} * 0.4);
-    height: calc(#{$size} * 0.4);
+    padding: calc(#{$size} * 0.25);
 
     background-color: $color;
+    background-clip: content-box;
+    border: 2px solid $border-color;
     border-radius: 50%;
-    transform: translate(75%, -50%);
+    // transform: translateY(-50%);
   }
 }

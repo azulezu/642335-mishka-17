@@ -1,7 +1,7 @@
 .page-footer {
   margin: 0 auto;
 
-  background-color: #f1f1f1;
+  background-color: $blanc;
 }
 
 .page-footer__wrapper {
@@ -9,30 +9,31 @@
 }
 
 .page-footer__socials {
-  padding: 25px 0;
+  padding: 24px 0 20px;
 }
 
 .page-footer__copyright {
-  padding: 20px 0;
+  padding: 22px 0 20px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
     position: relative;
 
-    padding: 40px 0;
+    padding: 51px 0 38px;
   }
 
   .page-footer__wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     // width: $tablet-width;
     padding: 0 $tablet-padding;
   }
 
   .page-footer__socials {
     position: absolute;
+    top: 32px;
   }
 
   .page-footer__copyright {

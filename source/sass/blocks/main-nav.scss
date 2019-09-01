@@ -3,18 +3,21 @@
 
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-  align-items: flex-start;
+  // ++
+  // padding: 0;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 32px;
+  right: calc(50% - 130px);
   z-index: 1;
 
   width: 21px;
   height: 20px;
+
+  padding: 0;
+  //  крестик
 
   background: #ffffff url("../img/icon-menu-close.svg") center no-repeat;
   border: none;
@@ -26,44 +29,91 @@
 }
 
 .main-nav__menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
+  display: block;
   margin: 0;
-  padding: 0 $mobile-padding;
-
-  list-style: none;
+  padding: 0;
 }
 
 .main-nav__menu--offers {
   display: none;
 }
 
+.main-nav__item {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  border-top: 1px solid $light-pearl;
+}
+
 .main-nav__link {
   display: block;
-  padding: 30px 30px 30px 45px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 26px 30px 28px 75px;
 
   font-weight: bold;
   font-size: 17px;
   color: $big-text-color;
 
-  &--search {
-    background: url("../img/icon-search.svg") left center no-repeat;
+  &:hover,
+  &:focus {
+    color: rgba(#000000, $batiste);
   }
 
-  &--cart {
-    background: url("../img/icon-cart.svg") left center no-repeat;
+  &:active {
+    opacity: $tulle;
   }
+
+  &--search,
+  &--cart {
+    padding-left: 30px;
+  }
+}
+
+.main-nav__link svg {
+  display: inline-block;
+  width: 21px;
+  margin-right: 20px;
+
+  vertical-align: middle;
+}
+
+.main-nav__link svg > path {
+  opacity: 0.2;
+}
+
+.main-nav__link:hover svg > path {
+  opacity: 1;
+
+  fill: $fade-turquoise;
 }
 
 .main-nav__line--delivery {
   display: none;
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__toggle {
+    width: 20px;
+    height: 14px;
+    right: calc(50% - 128px);
+    // гамбургер
+    background-image: url("../img/icon-menu-open.svg");
+  }
+
+  .main-nav--closed .main-nav__menu {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-nav {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -75,69 +125,99 @@
   }
 
   .main-nav__menu {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 0;
+  }
+
+  .main-nav__menu--offers {
+    display: none;
   }
 
   .main-nav__menu--user {
-    align-items: stretch;
     order: 2;
   }
 
-  .main-nav__menu--site {
-    order: 3;
+  .main-nav__link {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
   }
 
-  .main-nav__link {
-    padding: 0;
+  .main-nav__item {
+    border-top: none;
   }
 
   .main-nav__menu--user .main-nav__link {
-    padding: 32px 0 32px 80px;
-
-    background-position: 30px 35px;
     border-left: 1px solid $light-pearl;
   }
 
   .main-nav__link--search {
-    height: 88px;
+    padding: 32px 30px 32px;
   }
 
   .main-nav__link--search .main-nav__link-text {
     display: none;
   }
 
-  .main-nav__menu--site .main-nav__link {
-    width: 167px;
-    padding: 16px 0;
+  .main-nav__link--cart {
+    padding: 31px 0 33px 33px;
+  }
 
+  .main-nav__link svg {
+    margin: 0;
+  }
+
+  .main-nav__link--cart svg {
+    margin-right: 25px;
+  }
+
+  .main-nav__menu--site {
+    order: 3;
+  }
+
+  .main-nav__menu--site .main-nav__item {
+    margin-right: 36px;
+  }
+
+  .main-nav__menu--site .main-nav__item:last-child {
+    margin-right: 0;
+  }
+
+  .main-nav__menu--site .main-nav__link {
+    padding-top: 18px;
+    padding-bottom: 16px;
     font-size: 15px;
   }
 
   .main-nav__line--delivery {
     display: block;
     order: 4;
-    // vertical-align: middle;
-
     color: inherit;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    // width: $desktop-width;
+    // margin: 0 auto;
+    justify-content: flex-start;
+  }
+
   .main-nav__menu--site {
     order: 1;
   }
 
   .main-nav__menu--site .main-nav__link {
-    width: auto;
-    padding: 32px 36px 32px 32px;
-
     font-size: 17px;
+
+    // width: auto;
+    padding: 32px 36px 32px 32px;
   }
 
   .main-nav__menu--site .main-nav__item {
     border-right: 1px solid $light-pearl;
+    margin-right: 0;
   }
 
   .main-nav__menu--site .main-nav__item:last-child {
@@ -150,6 +230,7 @@
 
   .main-nav__menu--user {
     order: 3;
+    margin-left: auto;
   }
 
   .main-nav__menu--offers {
@@ -169,5 +250,6 @@
 
   .main-nav__line--delivery {
     order: 5;
+    margin-left: auto;
   }
 }

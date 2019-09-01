@@ -1,6 +1,6 @@
 .catalog__title {
   margin-left: -3px;
-  padding: 67px 0 76px;
+  padding: 71px 0 76px;
 }
 
 .catalog__list {
@@ -27,7 +27,7 @@
   color: $big-text-color;
 }
 
-@media (max-width: $mobile-only-width) {
+@media (max-width: $mobile-width-only) {
   .catalog__title {
     font-size: 27px;
   }
@@ -55,7 +55,8 @@
 
 @media (min-width: $desktop-width) {
   .catalog__title {
-    padding: 38px 0 103px;
+    padding: 34px 0 103px;
+    margin-left: 4px;
   }
 
   .catalog__list {
@@ -66,5 +67,9 @@
     margin-top: 112px;
     margin-left: -50px;
     padding: 0 50px;
+  }
+
+  .catalog__item {
+    margin-bottom: 57px;
   }
 }
