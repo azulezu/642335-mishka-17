@@ -7,10 +7,10 @@ if (modal) {
 
   modal_link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    modal.classList.remove("js-class__hide");
+    modal.classList.remove("js-class__remove");
     form.focus();
     form.addEventListener("submit", function(evt) {
-      modal.classList.add("js-class__hide");
+      modal.classList.add("js-class__remove");
     });
   });
 
@@ -18,7 +18,7 @@ if (modal) {
   window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      modal.classList.add("js-class__hide");
+      modal.classList.add("js-class__remove");
     }
   });
 }

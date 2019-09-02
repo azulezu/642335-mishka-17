@@ -34,17 +34,22 @@
   // }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .map {
-    min-width: $desktop-column;
+    min-width: $tablet-width;
   }
 
   .map__img {
+    width: $tablet-width;
     left: calc(50% - 386px);
   }
 }
 
 @media (min-width: $desktop-width) {
+  .map {
+    min-width: $desktop-column;
+  }
+
   .map__img {
     left: calc(50% - 262px);
   }

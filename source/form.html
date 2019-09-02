@@ -8,13 +8,19 @@
   <meta name="format-detection" content="telephone=no">
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
   <header class="page-header">
     <nav class="page-header-block main-nav main-nav--nojs">
       <a class="logo logo--header" href="index.html">
-        <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
+        <!-- <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA"> -->
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo-image" src="img/logo-mobile.svg" alt="MISHKA" width="86" height="35">
+        </picture>
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Развернуть меню"></button>
       <ul class="main-nav__menu main-nav__menu--site">
