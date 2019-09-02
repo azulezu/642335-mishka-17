@@ -40,8 +40,12 @@ var iframeError = setTimeout(function() {
     console.log(' isTimeout=' + isTimeout);
     console.log('загрузилось ' + mapiFrame.src + "\n\n");
     if (!isTimeout & isNoError) {
-      mapImg.classList.add("js-class__hide");
-      console.log('спрятать ');
+      mapiFrame.classList.remove("js-class__hide");
+      mapImg.classList.add("js-class__remove");
+      console.log('спрятать картинку');
+    }
+    else {
+      mapiFrame.classList.add("js-class__hide");
     }
   })
 

@@ -8,13 +8,19 @@
   <meta name="format-detection" content="telephone=no">
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
   <header class="page-header page-header--main">
     <nav class="page-header-block main-nav main-nav--nojs">
       <a class="logo logo--header">
-        <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
+        <!-- <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA"> -->
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo-image" src="img/logo-mobile.svg" alt="MISHKA" width="86" height="35">
+        </picture>
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Развернуть меню"></button>
       <ul class="main-nav__menu main-nav__menu--site">
@@ -99,7 +105,12 @@
           </tr>
         </table>
       </div>
-      <img class="hit__img" src="https://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+      <!-- <img class="hit__img" src="https://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки"> -->
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+        <img class="hit__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"  width="260" height="315" alt="Вязаные корзинки">
+      </picture>
       <div class="hit__buy">
         <p class="hit__price-line hit__line hit__line--center">Цена: <span class="hit__price">990 руб.</span></p>
         <a class="hit__order-button button" href="form.html">Заказать</a>
@@ -176,7 +187,12 @@
         <div class="map__wrapper">
           <iframe class="map__iframe" allowfullscreen>
           </iframe>
-          <img class="map__img" src="img/map-mobile.png" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <!-- <img class="map__img" src="img/map-mobile.png" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"> -->
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="map__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          </picture>
         </div>
         <figcaption class="map__desc visually-hidden">
           Расположение магазина &laquo;Мишка&raquo; на карте
@@ -230,7 +246,7 @@
     </div>
   </footer>
 
-  <div class="modal js-class__hide modal__overlay">
+  <div class="js-class__remove modal modal__overlay">
     <div class="modal__content">
       <section class="add">
         <h2 class="page-content__title add__title">Добавить

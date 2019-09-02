@@ -27,6 +27,17 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
 }
 
+// JS - классы
+.js-class__remove {
+  display: none !important;
+}
+
+.js-class__hide {
+  visibility: hidden !important;
+}
+
+// глобальные
+
 body {
   min-width: $mobile-width;
   margin: 0;
@@ -49,6 +60,7 @@ img {
 a {
   text-decoration: none;
 }
+
 // * * * {background-color: rgba(yellow, 0.1);}
 // * * * * {background-color: rgba(chartreuse, 0.1);}
 // * * * * * {background-color: rgba(grey, 0.1);}

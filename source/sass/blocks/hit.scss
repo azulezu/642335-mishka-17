@@ -77,7 +77,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 0 $tablet-padding 54px;
+    padding: 0 $tablet-padding 48px;
   }
 
   .hit__title {
@@ -102,7 +102,7 @@
   .hit__description {
     width: $tablet-column;
     padding-right: 40px;
-    padding-bottom: 103px;
+    padding-bottom: 116px;
     margin-top: -6px;
   }
 
@@ -141,7 +141,7 @@
 
   .hit__buy {
     width: $tablet-column;
-    margin-top: -109px;
+    margin-top: -116px;
     padding-right: 45px;
   }
 

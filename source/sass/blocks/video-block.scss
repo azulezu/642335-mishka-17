@@ -35,6 +35,7 @@
   outline: none;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
     transform: translate(-50%, -50%) scale(1.2);
