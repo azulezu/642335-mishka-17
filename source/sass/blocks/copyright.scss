@@ -22,11 +22,11 @@
   }
 }
 
-.copyright__logo-image > path {
+.copyright__logo-image {
   fill: $fade-turquoise;
 }
 
-.copyright__link:hover .copyright__logo-image > path {
+.copyright__link:hover .copyright__logo-image {
   fill: $teal;
 }
 

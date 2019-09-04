@@ -102,16 +102,14 @@
   }
 }
 
-.product:hover .product__add-icon {
-  opacity: 1;
-}
-
 .product__add-icon {
   opacity: 0.2;
+  fill: #000000;
 }
 
-.product:hover .product__add-icon > path {
+.product:hover .product__add-icon {
   fill: $fade-turquoise;
+  opacity: 1;
 }
 
 .product:active .product__add-icon {
