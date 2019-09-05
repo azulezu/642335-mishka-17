@@ -71,19 +71,18 @@
   }
 }
 
-.main-nav__link svg {
+.main-nav__icon {
   display: inline-block;
   width: 21px;
   margin-right: 20px;
 
   vertical-align: middle;
-}
-
-.main-nav__link svg > path {
   opacity: 0.2;
+  // fill: #231f20;
+  fill: black;
 }
 
-.main-nav__link:hover svg > path {
+.main-nav__link:hover .main-nav__icon {
   opacity: 1;
 
   fill: $fade-turquoise;
@@ -164,12 +163,12 @@
     padding: 31px 0 33px 33px;
   }
 
-  .main-nav__link svg {
+  .main-nav__icon {
     margin: 0;
-  }
 
-  .main-nav__link--cart svg {
-    margin-right: 25px;
+    &--cart {
+      margin-right: 25px;
+    }
   }
 
   .main-nav__menu--site {

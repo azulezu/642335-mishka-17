@@ -211,6 +211,7 @@
   height: 24px;
 
   opacity: 0.2;
+  fill: #000000;
 
   &--tel {
     top: 18px;
@@ -230,10 +231,7 @@
 .order-form__input-text:focus + .order-form__icon,
 .order-form__input-text:hover + .order-form__icon {
   opacity: 1;
-
-  path {
-    fill: $dull-turquoise;
-  }
+  fill: $dull-turquoise;
 }
 
 .order-form__notation {
