@@ -6,7 +6,8 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement("picture");
   </script>
@@ -14,6 +15,9 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header page-header--main">
     <nav class="page-header-block main-nav main-nav--nojs">
       <a class="logo logo--header">
@@ -36,14 +40,14 @@
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--search" href="#">
             <svg class="main-nav__icon main-nav__icon--search" width="17.6" height="17.6">
-              <use xlink:href="img/mysprite.svg#icon-search"></use>
+              <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             <span class="main-nav__link-text">Поиск по сайту</span></a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--cart" href="#">
             <svg class="main-nav__icon main-nav__icon--cart" width="17.6" height="17.6">
-              <use xlink:href="img/mysprite.svg#icon-cart"></use>
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
             </svg>
             <span class="main-nav__link-text">Корзина: пока пуста</span>
           </a>
@@ -130,7 +134,10 @@
         <li class="advantages__item advantages__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
         <li class="advantages__item advantages__item--knit">Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
         <li class="advantages__item advantages__item--gagarin">Поддержка отечественного производителя</li>
-        <li class="advantages__item advantages__item--gift">Поставляется в подарочной&nbsp;упаковке</li>
+        <li class="advantages__item advantages__item--gift">
+      <!-- <svg class="advantages__icon advantages__icon--gift" width="35" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-gift"></use></svg> -->
+          Поставляется в подарочной&nbsp;упаковке
+        </li>
       </ul>
     </section>
     <!-- advantages -->
@@ -218,21 +225,21 @@
           <li class="socials__item">
             <a class="socials__link socials__link--insta" href="#" aria-label="Инстаграм">
               <svg class="socials__icon socials__icon--insta" width="21" height="21">
-                <use xlink:href="img/mysprite.svg#icon-insta"></use>
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#" aria-label="Фейсбук">
               <svg class="socials__icon socials__icon--fb" width="23" height="28">
-                <use xlink:href="img/mysprite.svg#icon-fb"></use>
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--tw" href="#" aria-label="Твиттер">
               <svg class="socials__icon socials__icon--tw" width="23" height="23">
-                <use xlink:href="img/mysprite.svg#icon-twitter"></use>
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -242,7 +249,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__logo-image" width="27" height="34">
-            <use xlink:href="img/mysprite.svg#icon-copyright"></use>
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
