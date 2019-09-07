@@ -12,6 +12,7 @@ var fromStart = performance.now();
 
 if (map) {
   var mapImg = map.querySelector(".map__img");
+  var mapPin = map.querySelector(".map__pin");
   var mapiFrame = document.querySelector(".map__iframe");
 
 // если слишком быстро - считаем, что фрейм
@@ -41,6 +42,7 @@ var iframeError = setTimeout(function() {
     console.log('загрузилось ' + mapiFrame.src + "\n\n");
     if (!isTimeout & isNoError) {
       mapiFrame.classList.remove("js-class__hide");
+      mapPin.classList.add("js-class__remove");
       mapImg.classList.add("js-class__remove");
       console.log('спрятать картинку');
     }

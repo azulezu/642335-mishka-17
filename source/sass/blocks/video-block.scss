@@ -1,4 +1,5 @@
 .video-block {
+  position: relative;
   margin: 0 $mobile-padding 60px;
   padding: 0 0 30px;
 
@@ -6,9 +7,7 @@
 }
 
 .video-block__title {
-  padding: 22px 0 25px 89px;
-
-  background: url("../img/icon-video.svg") 33px 28px no-repeat;
+  padding: 24px 0 24px 89px;
 }
 
 .video-block__video {
@@ -34,9 +33,9 @@
 .video-block__control {
   position: absolute;
   padding: 0;
-  top: 50%;
+  top: 48%;
   left: 50%;
-  width: 101px;
+  width: 100px;
   height: 77px;
   background: url("../img/icon-play.svg") center no-repeat;
   border: none;
@@ -66,6 +65,15 @@
   margin: 0 33px;
 }
 
+.video-block__icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 33px;
+  top: 29px;
+  fill: $fade-turquoise;
+}
+
 @media (min-width: $tablet-width) {
   .video-block {
     display: flex;
@@ -88,8 +96,6 @@
   .video-block__title {
     order: 2;
     padding: 33px 0 32px 65px;
-
-    background-position: 0 center;
   }
 
   .video-block__line {
@@ -103,6 +109,11 @@
   .video-block__order-button {
     order: 4;
     margin: 0;
+  }
+
+  .video-block__icon {
+    left: 41px;
+    top: 488px;
   }
 }
 
@@ -133,8 +144,6 @@
 
     margin-bottom: 32px;
     padding: 95px 0 0;
-
-    background-position: 0 40px;
   }
 
   .video-block__line {
@@ -145,5 +154,10 @@
 
   .video-block__order-button {
     margin: 0;
+  }
+
+  .video-block__icon {
+    left: calc(50% + 238px);
+    top: 40px;
   }
 }

@@ -46,22 +46,6 @@
     color: change-color(#ffffff, $alpha: $tulle);
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-
-    background: center center no-repeat;
-    opacity: $chiffon;
-  }
-
-  &:hover::after {
-    opacity: $muslin;
-  }
-
-  &:active::after {
-    opacity: $tulle;
-  }
-
   &--decor {
     background-color: $fade-turquoise;
 
@@ -71,16 +55,6 @@
 
     &:active {
       background-color: $turquoise;
-    }
-
-    &::after {
-      top: 22px;
-      left: calc(50% + 84px);
-
-      width: 40px;
-      height: 62px;
-
-      background-image: url("../img/icon-interior.svg");
     }
   }
 
@@ -94,16 +68,36 @@
     &:active {
       background-color: $teal;
     }
+  }
+}
 
-    &::after {
-      top: 21px;
-      left: calc(50% + 73px);
+.assortment__icon {
+  position: absolute;
+  fill: $jade;
+  opacity: $chiffon;
 
-      width: 60px;
-      height: 60px;
+  &:hover {
+    opacity: $muslin;
+  }
 
-      background-image: url("../img/icon-toy.svg");
-    }
+  &:active {
+    opacity: $tulle;
+  }
+
+  &--decor {
+    top: 22px;
+    left: calc(50% + 84px);
+
+    width: 40px;
+    height: 62px;
+  }
+
+  &--toys {
+    top: 21px;
+    left: calc(50% + 73px);
+
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -160,17 +154,15 @@
     flex-grow: 1;
   }
 
-  .assortment__link {
-    &::after {
-      left: auto;
-    }
+  .assortment__icon {
+    left: auto;
 
-    &--decor::after {
+    &--decor {
       top: 30px;
       right: 36px;
     }
 
-    &--toys::after {
+    &--toys {
       top: 32px;
       right: 34px;
     }
