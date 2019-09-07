@@ -24,56 +24,51 @@
   line-height: 20px;
   font-family: $default-font;
   color: $big-text-color;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
+.advantages__icon {
+  position: absolute;
+  fill: $fade-turquoise;
 
-    width: 60px;
-    height: 60px;
-
-    background-repeat: no-repeat;
+  &--eco {
+    width: 40px;
+    height: 38px;
+    top: 26px;
+    left: 4px;
   }
 
-  &--eco::before {
-    background-image: url("../img/icon-feature-flower.svg");
-    background-position: left center;
-    top: 15px;
-    left: 8px;
+  &--ikea {
+    width: 50px;
+    height: 27px;
+    top: 28px;
+    left: -2px;
   }
 
-  &--ikea::before {
-    background-image: url("../img/icon-feature-money.svg");
-    background-position: left center;
-    top: 12px;
-    left: 0;
+  &--likes {
+    width: 35px;
+    height: 35px;
+    top: 30px;
+    left: 7px;
   }
 
-  &--likes::before {
-    background-image: url("../img/icon-feature-heart.svg");
-    background-position: left center;
-    top: 17px;
-    left: 8px;
-  }
-
-  &--knit::before {
-    background-image: url("../img/icon-feature-ball.svg");
-    background-position: left center;
-    top: 17px;
+  &--knit {
+    width: 40px;
+    height: 40px;
+    top: 30px;
     left: 3px;
   }
 
-  &--gagarin::before {
-    background-image: url("../img/icon-feature-rocket.svg");
-    background-position: left center;
-    top: 13px;
+  &--gagarin {
+    width: 55px;
+    height: 30px;
+    top: 28px;
     left: -6px;
   }
 
-  &--gift::before {
-    background-image: url("../img/icon-feature-gift.svg");
-    background-position: left center;
-    top: 15px;
+  &--gift {
+    width: 33px;
+    height: 33px;
+    top: 29px;
     left: 3px;
   }
 }
@@ -105,10 +100,6 @@
     font-size: 20px;
     line-height: 22px;
 
-    &::before {
-      top: 45px;
-    }
-
     &--eco {
       order: 1;
     }
@@ -131,6 +122,32 @@
 
     &--gift {
       order: 6;
+    }
+  }
+
+  .advantages__icon {
+    &--eco {
+      top: 58px;
+    }
+
+    &--ikea {
+      top: 59px;
+    }
+
+    &--likes {
+      top: 60px;
+    }
+
+    &--knit {
+      top: 62px;
+    }
+
+    &--gagarin {
+      top: 58px;
+    }
+
+    &--gift {
+      top: 58px;
     }
   }
 }
@@ -158,36 +175,6 @@
 
   .advantages__item {
     width: $desktop-column;
-    padding-top: 114px;
-
-    &--eco::before {
-      top: 47px;
-      left: 9px;
-    }
-
-    &--ikea::before {
-      top: 43px;
-      left: 1px;
-    }
-
-    &--likes::before {
-      top: 47px;
-      left: 8px;
-    }
-
-    &--knit::before {
-      top: 49px;
-      left: 3px;
-    }
-
-    &--gagarin::before {
-      top: 44px;
-      left: -6px;
-    }
-
-    &--gift::before {
-      top: 45px;
-      left: 3px;
-    }
+    // padding-top: 114px;
   }
 }

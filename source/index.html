@@ -6,7 +6,6 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement("picture");
@@ -40,14 +39,14 @@
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--search" href="#">
             <svg class="main-nav__icon main-nav__icon--search" width="17.6" height="17.6">
-              <use xlink:href="img/sprite.svg#icon-search"></use>
+              <use xlink:href="#icon-search"></use>
             </svg>
             <span class="main-nav__link-text">Поиск по сайту</span></a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--cart" href="#">
             <svg class="main-nav__icon main-nav__icon--cart" width="17.6" height="17.6">
-              <use xlink:href="img/sprite.svg#icon-cart"></use>
+              <use xlink:href="#icon-cart"></use>
             </svg>
             <span class="main-nav__link-text">Корзина: пока пуста</span>
           </a>
@@ -76,11 +75,15 @@
       <ul class="assortment__list">
         <li class="assortment__item">
           <a class="assortment__link assortment__link--decor active" href="decor.html">
-            <span class="assortment__category">Предметы <br>интерьера</span></a>
+            <span class="assortment__category">Предметы <br>интерьера</span>
+            <svg class="assortment__icon assortment__icon--decor" width="40" height="62" aria-hidden="true" role="presentation"><use xlink:href="#icon-interior"></use></svg>
+          </a>
         </li>
         <li class="assortment__item">
           <a class="assortment__link assortment__link--toys" href="toys.html">
-            <span class="assortment__category">Детские <br>игрушки</span></a>
+            <span class="assortment__category">Детские <br>игрушки</span>
+            <svg class="assortment__icon assortment__icon--toys" width="60" height="60" aria-hidden="true" role="presentation"><use xlink:href="#icon-toy"></use></svg>
+          </a>
         </li>
       </ul>
       <div class="page-content__zigzag-divider page-content__zigzag-divider--main"></div>
@@ -129,13 +132,28 @@
     <section class="advantages wrapper">
       <h2 class="page-content__title advantages__title">Коротко о нас:</h2>
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--eco">Экологически чистые&nbsp;материалы</li>
-        <li class="advantages__item advantages__item--ikea">Скандинавский стиль по&nbsp;российской цене</li>
-        <li class="advantages__item advantages__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
-        <li class="advantages__item advantages__item--knit">Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
-        <li class="advantages__item advantages__item--gagarin">Поддержка отечественного производителя</li>
+        <li class="advantages__item advantages__item--eco">
+          <svg class="advantages__icon advantages__icon--eco" width="40" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-flower"></use></svg>
+          Экологически чистые&nbsp;материалы
+        </li>
+        <li class="advantages__item advantages__item--ikea">
+          <svg class="advantages__icon advantages__icon--ikea" width="40" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-money"></use></svg>
+          Скандинавский стиль по&nbsp;российской цене
+        </li>
+        <li class="advantages__item advantages__item--likes">
+          <svg class="advantages__icon advantages__icon--likes" width="40" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-heart"></use></svg>
+          Увеличивает лайки на&nbsp;фотографиях
+        </li>
+        <li class="advantages__item advantages__item--knit">
+          <svg class="advantages__icon advantages__icon--knit" width="40" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-ball"></use></svg>
+          Связано вручную с любовью&nbsp;и&nbsp;умилением
+        </li>
+        <li class="advantages__item advantages__item--gagarin">
+          <svg class="advantages__icon advantages__icon--gagarin" width="40" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-rocket"></use></svg>
+          Поддержка отечественного производителя
+        </li>
         <li class="advantages__item advantages__item--gift">
-      <!-- <svg class="advantages__icon advantages__icon--gift" width="35" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-gift"></use></svg> -->
+          <svg class="advantages__icon advantages__icon--gift" width="40" height="40" aria-hidden="true" role="presentation"><use xlink:href="#icon-feature-gift"></use></svg>
           Поставляется в подарочной&nbsp;упаковке
         </li>
       </ul>
@@ -205,6 +223,8 @@
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="map__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
+          <div class="map__pin">
+          </div>
         </div>
         <figcaption class="map__desc visually-hidden">
           Расположение магазина &laquo;Мишка&raquo; на карте
@@ -225,21 +245,21 @@
           <li class="socials__item">
             <a class="socials__link socials__link--insta" href="#" aria-label="Инстаграм">
               <svg class="socials__icon socials__icon--insta" width="21" height="21">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#" aria-label="Фейсбук">
               <svg class="socials__icon socials__icon--fb" width="23" height="28">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--tw" href="#" aria-label="Твиттер">
               <svg class="socials__icon socials__icon--tw" width="23" height="23">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -249,7 +269,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__logo-image" width="27" height="34">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
