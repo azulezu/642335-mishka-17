@@ -25,7 +25,8 @@
 
   .page-footer__wrapper {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     // width: $tablet-width;
     padding: 0 $tablet-padding;
@@ -34,6 +35,8 @@
   .page-footer__socials {
     position: absolute;
     top: 32px;
+    left: 0;
+    right: 0;
   }
 
   .page-footer__copyright {

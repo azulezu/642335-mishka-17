@@ -5,6 +5,7 @@
 
 .order-form__fieldset {
   width: $mobile-width;
+  max-width: 100%;
   margin: 0;
   padding: 0 $mobile-padding;
 
@@ -74,6 +75,7 @@
 .order-form__inner-wrap {
   &--submit {
     width: $mobile-width;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 $mobile-padding;
   }
@@ -444,7 +446,7 @@
   }
 
   .order-form__fieldset--colors .order-form__piece {
-    width: 260px;
+    width: 262px;
   }
 
   .order-form__extra {
