@@ -15,7 +15,7 @@
   <script src="js/picturefill.min.js" async></script>
 </head>
 
-<body>
+<body class="js-class">
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
@@ -68,7 +68,7 @@
 
   <main class="page-content page-content--main">
     <h1 class="visually-hidden">Интернет-магазин мимимишных штучек &laquo;Мишка&raquo;</h1>
-    <section class="assortment">
+    <section class="assortment page-content__zigzag-divider page-content__zigzag-divider--main">
       <div class="assortment__banner">
         <h2 class="assortment__title page-content__title page-content__title--main">Милые штуки
           ручной
@@ -88,11 +88,13 @@
           </a>
         </li>
       </ul>
-      <div class="page-content__zigzag-divider page-content__zigzag-divider--main"></div>
+      <!-- <div class="page-content__zigzag-divider page-content__zigzag-divider--main"></div> -->
     </section>
     <!-- assortment -->
 
-    <article class="hit wrapper">
+    <!-- <article class="hit wrapper page-content__curly-divider"> -->
+    <article class="hit page-content__curly-divider">
+<div class="hit__wrapper wrapper">
       <h2 class="visually-hidden">Популярные товары</h2>
       <div class="hit__title">
         <h3 class="page-content__title hit__name">Вязаные корзинки</h3>
@@ -127,10 +129,11 @@
         <p class="hit__price-line hit__line hit__line--center">Цена: <span class="hit__price">990 руб.</span></p>
         <a class="hit__order-button button" href="form.html">Заказать</a>
       </div>
+</div>
     </article>
     <!-- hit -->
 
-    <div class="page-content__curly-divider"></div>
+    <!-- <div class="page-content__curly-divider"></div> -->
     <section class="advantages wrapper">
       <h2 class="page-content__title advantages__title">Коротко о нас:</h2>
       <ul class="advantages__list">
@@ -162,7 +165,7 @@
     </section>
     <!-- advantages -->
 
-    <section class="reviews">
+    <section class="reviews page-content__curly-divider">
       <div class="reviews__wrapper">
         <h2 class="page-content__title reviews__title">Отзывы</h2>
         <div class="slider reviews__slider">
@@ -193,7 +196,7 @@
     </section>
     <!-- reviews -->
 
-    <div class="page-content__curly-divider"></div>
+    <!-- <div class="page-content__curly-divider"></div> -->
 
     <section class="contacts">
       <div class="contacts__wrapper">
@@ -281,7 +284,7 @@
   <div class="js-class__remove modal modal__overlay">
     <div class="modal__content">
       <section class="add">
-        <h2 class="page-content__title add__title">Добавить
+        <h2 class="add__title">Добавить
           в корзину</h2>
         <p class="add__line">Выберите размер:</p>
         <form class="add__form" action="https://echo.htmlacademy.ru" method="post">

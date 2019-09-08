@@ -19,16 +19,30 @@
   background-color: $blanc;
 }
 
-.page-content__curly-divider {
-  display: block;
-  height: 6px;
+// .page-content__curly-divider {
+//   display: block;
+//   height: 6px;
+//
+//   background-image: url("../img/bg-zigzag-line.svg");
+//   background-size: auto 100%;
+// }
 
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-size: auto 100%;
+.page-content__curly-divider {
+  &::after {
+    display: block;
+    // position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 100%;
+    background-position: 0 center;
+  }
 }
 
 .page-content__zigzag-divider {
-  display: none;
+  // display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -46,20 +60,48 @@
   }
 
   .page-content__curly-divider {
-    height: 15px;
+    &::after {
+      height: 15px;
+    }
   }
+  //
+  // .page-content__zigzag-divider {
+  //   position: relative;
+  //   z-index: 2;
+  //
+  //   display: block;
+  //   height: 23px;
+  //   margin-top: -12px;
+  //
+  //   background-image: url("../img/bg-zigzag-fill.svg");
+  //   background-size: auto 100%;
+  //   background-position-x: 50%;
+  // }
 
   .page-content__zigzag-divider {
-    position: relative;
-    z-index: 2;
+    &::after {
+      // position: relative;
+      position: absolute;
+      content: "";
+      z-index: 2;
 
-    display: block;
-    height: 23px;
-    margin-top: -12px;
+      display: block;
+      width: 100%;
+      height: 23px;
+      bottom: 0;
+      margin-top: -12px;
 
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-size: auto 100%;
-    background-position-x: 50%;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 100%;
+      background-position-x: 50%;
+    }
+
+    &--main {
+      &::after {
+        position: relative;
+        bottom: auto;
+      }
+    }
   }
 }
 
@@ -78,24 +120,32 @@
   }
 
   .page-content__curly-divider {
-    height: 21px;
-    // margin: 0 50px;
-    background-position-x: -28px;
-    margin: 0 auto;
-    padding: 0 50px;
-    width: $desktop-width;
-    max-width: 100%;
-    background-clip: content-box;
+    &::after {
+      width: $desktop-width;
+      max-width: 100%;
+      height: 21px;
+      margin: 0 auto;
+      padding: 0 50px;
+      // margin: 0 50px;
+
+      background-position-x: -28px;
+      background-clip: content-box;
+    }
   }
 
+
   .page-content__zigzag-divider {
-    height: 34px;
-    margin-top: -17px;
+    &::after {
+      height: 34px;
+      margin-top: -17px;
+    }
     // margin-right: 50px;
     // margin-left: 50px;
   }
 
   .page-content__zigzag-divider--main {
-    height: 37px;
+    &::after {
+      height: 37px;
+    }
   }
 }

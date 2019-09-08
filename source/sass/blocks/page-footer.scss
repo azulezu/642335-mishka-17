@@ -35,8 +35,8 @@
   .page-footer__socials {
     position: absolute;
     top: 32px;
-    left: 0;
-    right: 0;
+    left: calc(50% - 145px);
+    width: 290px;
   }
 
   .page-footer__copyright {

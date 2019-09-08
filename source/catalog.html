@@ -15,7 +15,7 @@
   <script src="js/picturefill.min.js" async></script>
 </head>
 
-<body>
+<body class="js-class">
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
@@ -69,8 +69,8 @@
   <main class="page-content">
     <h1 class="visually-hidden">Каталог товаров интернет-магазина &laquo;Мишка&raquo;</h1>
     <section class="catalog">
-      <h2 class="catalog__title page-content__title  page-content__title--main">Каталог товаров</h2>
-      <div class="page-content__zigzag-divider"></div>
+      <h2 class="catalog__title page-content__title  page-content__title--main page-content__zigzag-divider">Каталог товаров</h2>
+      <!-- <div class="page-content__zigzag-divider"></div> -->
       <div class="wrapper">
         <ul class="catalog__list">
           <li class="catalog__item product">
@@ -173,7 +173,7 @@
 
     <div class="wrapper">
       <article class="video-block">
-        <h2 class="video-block__title catalog__article-title">Процесс производства</h2>
+        <h2 class="video-block__title">Процесс производства</h2>
         <div class="video-block__video">
           <video class="video-block__frame" width="260" height="150">
           <source src="#">
@@ -188,8 +188,10 @@
           </picture>
           <button class="video-block__control" type="button"><span class="visually-hidden">Play</span></button>
         </div>
+
         <p class="video-block__line">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="video-block__order-button button" href="form.html">Сделать заказ</a>
+
         <svg class="video-block__icon" width="32" height="32" aria-hidden="true" role="presentation"><use xlink:href="#icon-video"></use></svg>
       </article>
     </div>

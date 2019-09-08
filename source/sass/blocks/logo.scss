@@ -31,6 +31,7 @@
       margin-top: 22px;
       margin-bottom: 14px;
       order: 1;
+      align-self: flex-start;
     }
 
     &--footer {
@@ -57,7 +58,7 @@
     order: 2;
     margin-top: 8px;
     margin-bottom: 0;
-    margin-left: 40px;
+    margin-left: 42px;
   }
 
   .logo--header .logo-image {

@@ -141,6 +141,11 @@
   background: none;
 }
 
+.order-form__piece > input:focus + .order-form__label--checkbox::before,
+.order-form__piece > input:focus + .order-form__label--radio::before {
+  border-color: $dull-turquoise;
+}
+
 .order-form__input-text {
   width: 100%;
   margin-top: 12px;
@@ -241,7 +246,7 @@
 }
 
 .order-form__notation {
-  margin: 0 0 31px;
+  margin: 0 0 31px 30px;
 
   font-size: 14px;
   line-height: 16px;
