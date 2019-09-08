@@ -19,15 +19,15 @@ if (map) {
 // карту не загружал, ошибка
 var iframeError = setTimeout(function() {
   isNoError = true;
-  console.log(performance.now() - fromStart);
-  console.log('быстрый таймер isNoError=' + isNoError + "\n\n");
+  // console.log(performance.now() - fromStart);
+  // console.log('быстрый таймер isNoError=' + isNoError + "\n\n");
 }, TOO_FAST);
 
 // если долго загружается - ошибка
   var iframeTimeout = setTimeout(function() {
     isTimeout = true;
-    console.log(performance.now() - fromStart);
-    console.log('таймаут isTimeout=' + isTimeout + "\n\n");
+    // console.log(performance.now() - fromStart);
+    // console.log('таймаут isTimeout=' + isTimeout + "\n\n");
   }, BIG_TIMEOUT);
 
 // после загрузки сбрасываем таймеры и если
@@ -36,15 +36,15 @@ var iframeError = setTimeout(function() {
   mapiFrame.addEventListener('load', function() {
     clearTimeout(iframeError);
     clearTimeout(iframeTimeout);
-    console.log(performance.now() - fromStart);
-    console.log(' isNoError=' + isNoError);
-    console.log(' isTimeout=' + isTimeout);
-    console.log('загрузилось ' + mapiFrame.src + "\n\n");
+    // console.log(performance.now() - fromStart);
+    // console.log(' isNoError=' + isNoError);
+    // console.log(' isTimeout=' + isTimeout);
+    // console.log('загрузилось ' + mapiFrame.src + "\n\n");
     if (!isTimeout & isNoError) {
       mapiFrame.classList.remove("js-class__hide");
       mapPin.classList.add("js-class__remove");
       mapImg.classList.add("js-class__remove");
-      console.log('спрятать картинку');
+      // console.log('спрятать картинку');
     }
     else {
       mapiFrame.classList.add("js-class__hide");

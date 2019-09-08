@@ -13,7 +13,7 @@
     height: $size;
 
     background: transparent url("../img/icon-tick.svg") center no-repeat;
-    background-size: calc(#{$size} * 0.5) calc(#{$size} * 0.5);
+    background-size: calc(#{$size} * 0.6) calc(#{$size} * 0.4);
     border: 2px solid $border-color;
     transform: translateY(-50%);
   }
