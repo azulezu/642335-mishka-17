@@ -24,6 +24,10 @@
   box-shadow: 0 3px 5px rgba(0, 0, 0, $gauze);
 }
 
+.product__name {
+  word-wrap: break-word;
+}
+
 .product__name a {
   color: inherit;
 }

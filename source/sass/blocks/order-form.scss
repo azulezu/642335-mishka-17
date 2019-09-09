@@ -246,7 +246,7 @@
 }
 
 .order-form__notation {
-  margin: 0 0 31px 30px;
+  margin: 0 0 31px 0;
 
   font-size: 14px;
   line-height: 16px;
@@ -403,6 +403,7 @@
   .order-form__notation {
     order: 2;
     margin-bottom: 0;
+    margin-left: 30px;
 
     font-size: 17px;
     line-height: 30px;
