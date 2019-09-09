@@ -27,16 +27,19 @@
     display: flex;
     // justify-content: center;
     justify-content: flex-start;
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: center;
     // width: $tablet-width;
     padding: 0 $tablet-padding;
   }
 
   .page-footer__socials {
-    position: absolute;
-    top: 32px;
-    left: calc(50% - 145px);
-    width: 290px;
+    // position: absolute;
+    // top: 32px;
+    // left: calc(50% - 145px);
+    // width: 290px;
+    padding: 0;
+    width: 33.3333%;
   }
 
   .page-footer__copyright {
@@ -51,7 +54,7 @@
   }
 
   .page-footer__socials {
-    position: absolute;
+    // position: absolute;
   }
 
   .page-footer__copyright {

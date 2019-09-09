@@ -37,7 +37,9 @@
     &--footer {
       display: block;
       margin-right: auto;
-      align-self: auto;
+      // align-self: auto;
+      align-self: flex-start;
+      width: 33.3333%;
     }
   }
 

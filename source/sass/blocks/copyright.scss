@@ -31,6 +31,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+    width: 33.3333%;
+  }
+
   .copyright__link {
     margin-top: -3px;
   }
