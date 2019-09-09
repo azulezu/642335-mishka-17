@@ -3,6 +3,7 @@
   font-size: 18px;
   line-height: 20px;
   font-family: $default-font;
+  flex-shrink: 0;
 
   @include button($charcoal);
 }

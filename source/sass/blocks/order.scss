@@ -24,7 +24,8 @@
 
 @media (min-width: $tablet-width) {
   .order__title {
-    padding: 36px 0 82px;
+    padding: 36px 0 94px;
+    position: relative;
   }
 
   .order__line {
@@ -45,7 +46,7 @@
 
 @media (min-width: $desktop-width) {
   .order__title {
-    padding-bottom: 102px;
+    padding-bottom: 121px;
   }
 
   .order__line {

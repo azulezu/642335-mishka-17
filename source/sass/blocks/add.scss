@@ -1,15 +1,21 @@
 .add {
-  padding: 30px $mobile-padding 46px;
-  margin: 0 auto;
   width: $mobile-width;
+  margin: 0 auto;
+  padding: 30px $mobile-padding 46px;
 }
 
 .add__title {
-  text-align: center;
-  text-transform: uppercase;
-  white-space: pre-line;
   margin: 0;
   margin-bottom: 12px;
+
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: $default-font;
+  text-align: center;
+  color: $big-text-color;
+  text-transform: uppercase;
+  white-space: pre-line;
 }
 
 .add__line {
@@ -37,10 +43,10 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  text-align: center;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
+  text-align: center;
   text-transform: uppercase;
 
   border: 2px solid rgba($charcoal, $gauze);
@@ -60,26 +66,51 @@
 }
 
 .add__submit {
-  @include button($fade-turquoise, #ffffff, $fade-turquoise);
   margin: 0 auto;
 
-  &:hover {
-    margin-top: -5px;
-    padding-bottom: 19px;
+  // @include button($fade-turquoise, #ffffff, $fade-turquoise);
+  //
+  // &:hover {
+  //   margin-top: -5px;
+  //   padding-bottom: 19px;
+  // }
+  //
+  // &:active {
+  //   color: change-color(white, $alpha: $tulle);
+  //   background-color: $teal;
+  // }
+  display: block;
+  width: 100%;
+  padding: 14px;
 
-    // color: rgba(white, $chiffon);
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: $fade-turquoise;
+  border: 2px solid $fade-turquoise;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $fade-turquoise;
+    border-color: $fade-turquoise;
+    background-color: #ffffff;
+    outline: none;
   }
 
   &:active {
-    // color: change-color(white, $alpha: $tulle);
-    // background-color: $teal;
+    color: rgba($fade-turquoise, $tulle);
+
+    // background-color: $border-color;
   }
 }
 
 @media (min-width: $tablet-width) {
   .add {
-    padding: 32px $tablet-padding 46px;
     width: auto;
+    padding: 32px $tablet-padding 46px;
+
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   }
 

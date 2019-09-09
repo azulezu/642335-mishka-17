@@ -1,4 +1,5 @@
-.hit {
+// .hit {
+.hit__wrapper {
   padding: 27px $mobile-padding 36px;
 }
 
@@ -73,7 +74,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .hit {
+  // .hit {
+  .hit__wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -154,7 +156,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .hit {
+  // .hit {
+  .hit__wrapper {
     position: relative;
 
     display: block;

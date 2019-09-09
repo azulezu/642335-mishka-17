@@ -1,5 +1,6 @@
 .socials__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -9,12 +10,13 @@
 }
 
 .socials__item {
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
-.socials__item:last-of-type {
-  margin-right: 0;
-}
+// .socials__item:last-of-type {
+//   margin-right: 0;
+// }
 
 .socials__link {
   display: block;
@@ -35,3 +37,7 @@
     border-bottom: 1px solid $dark-pearl;
   }
 }
+
+// @media (min-width: $tablet-width) {
+//
+// }
